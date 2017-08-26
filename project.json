@@ -1,0 +1,18 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Autofac": "4.1.1",
+    "FluentValidation": "6.2.1",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "NETStandard.Library": "1.6.0",
+    "Prism.Core": "6.2.0",
+    "sqlite-net-pcl": "1.2.0",
+    "Toasts.Forms.Plugin": "3.1.0",
+    "Xamarin.Forms": "2.3.2.127"
+  },
+  "frameworks": {
+    "netstandard1.4": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
+  }
+}
