@@ -21,7 +21,7 @@ namespace SampleApplication
         {
             _repository = repository;
             _validator = validator;
-            SaveItemCommand = DelegateCommand.FromAsyncHandler(SaveItemAsync);
+            SaveItemCommand = new DelegateCommand(SaveItemAsync);
         }
 
         public SampleItem Model
@@ -57,7 +57,7 @@ namespace SampleApplication
             }
         }
 
-        private async Task SaveItemAsync()
+        private async void SaveItemAsync()
         {
             Notification result = Notification.Success();
             ModelUpdateEvent updateEvent = _isNewModel ? ModelUpdateEvent.Created : ModelUpdateEvent.Updated;

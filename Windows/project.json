@@ -1,15 +1,15 @@
 ﻿{
   "dependencies": {
-    "Autofac": "4.1.1",
-    "FluentValidation": "6.2.1",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Prism.Core": "6.2.0",
-    "sqlite-net-pcl": "1.2.0",
-    "Toasts.Forms.Plugin": "3.1.0",
-    "Xamarin.Forms": "2.3.2.127"
+    "Autofac": "4.6.1",
+    "FluentValidation": "7.1.1",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+    "Prism.Core": "6.3.0",
+    "sqlite-net-pcl": "1.4.118",
+    "Toasts.Forms.Plugin": "3.2.0",
+    "Xamarin.Forms": "2.3.4.267"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10240": {}
   },
   "runtimes": {
     "win10-arm": {},
