@@ -11,7 +11,7 @@ namespace SampleApplication
             //TODO: Incorporate Splash screen to await initialization, and then navigation to main page
             Initialize(platformModule);
             // The root page of your application
-            Navigation.NavigateAsync(Constants.Navigation.MainPage);
+            Navigation.NavigateAsync(Constants.Navigation.WelcomePage);
         }
 
         private INavigationService Navigation

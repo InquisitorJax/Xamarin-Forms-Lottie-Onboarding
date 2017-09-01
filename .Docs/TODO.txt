@@ -1,9 +1,0 @@
-﻿Add NLog Logging
-Add NGraphics 
-Add LabelEdit Control with validation binding via behaviour
-Add iOS Project
-Add UWP Project
-Add Custom Icon and App Name
-
-Add Material Styling for Android [DONE - see https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/]
-Add Master Detail Page (hamburger menu on landing page) [DONE - see https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/master-detail-page/]

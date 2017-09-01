@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XForms.Shared", "AllApplica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplication.iOS", "iOS\SampleApplication.iOS.csproj", "{1562E0A1-A7C2-49C6-92B5-3FFF7C6AB20A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F2A732D2-5EA3-4EF3-A516-0B2EB346081C}"
+	ProjectSection(SolutionItems) = preProject
+		ResourceLinks.txt = ResourceLinks.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

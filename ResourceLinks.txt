@@ -1,0 +1,24 @@
+Entity Framework Core
+https://almirvuk.blogspot.co.za/2017/08/xamarinforms-and-entity-framework-core.html
+Lottie:
+https://xamgirl.com/lottie-animations-step-by-step-in-xamarin-forms/
+Lottie Files short-list
+https://www.lottiefiles.com/490-loading
+https://www.lottiefiles.com/466-stopwatch-via-sketch2ae ZLC
+https://www.lottiefiles.com/451-notification
+https://www.lottiefiles.com/435-birds TL
+https://www.lottiefiles.com/408-youtube-icon-reveal
+https://www.lottiefiles.com/383-mild-wave
+https://www.lottiefiles.com/330-empty-status
+https://www.lottiefiles.com/295-refresh
+https://www.lottiefiles.com/282-search-a-location
+https://www.lottiefiles.com/272-give-a-nudge-onboarding-part1  MF
+https://www.lottiefiles.com/261-medal achievment unlocked! welcome :)
+https://www.lottiefiles.com/201-simple-loader
+https://www.lottiefiles.com/148-xamarin-logo-2
+https://www.lottiefiles.com/117-progress-bar
+https://www.lottiefiles.com/76-atm-link ZLC - get back to doing business
+https://www.lottiefiles.com/69-video-content-ta-dah
+https://www.lottiefiles.com/29-motorcycle
+Carousel View
+http://15mgm15.ghost.io/2017/01/29/xamarin-forms-carousel-view-tutorial/
