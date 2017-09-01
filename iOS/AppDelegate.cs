@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Lottie.Forms.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -33,6 +34,8 @@ namespace SampleApplication.iOS
             // Window.RootViewController = myViewController;
 
             Forms.Init();
+
+            AnimationViewRenderer.Init();
 
             LoadApplication(new App(new IociOSModule()));
 

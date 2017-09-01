@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Application.Droid;
+using Lottie.Forms.Droid;
 using Xamarin.Forms.Platform.Android;
 
 namespace SampleApplication
@@ -31,6 +32,8 @@ namespace SampleApplication
             _appContext = this;
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            AnimationViewRenderer.Init();
 
             LoadApplication(new App(new IocAndroidModule()));
         }
