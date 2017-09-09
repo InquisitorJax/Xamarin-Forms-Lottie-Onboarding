@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using Lottie.Forms.iOS.Renderers;
+using Syncfusion.SfRotator.XForms.iOS;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -35,6 +36,7 @@ namespace SampleApplication.iOS
 
             Forms.Init();
 
+            new SfRotatorRenderer();
             AnimationViewRenderer.Init();
 
             LoadApplication(new App(new IociOSModule()));

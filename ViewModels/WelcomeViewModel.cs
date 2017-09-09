@@ -1,13 +1,19 @@
 ﻿using Core;
-using System;
+using SampleApplication.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SampleApplication
 {
     public class WelcomeViewModel : ViewModelBase
     {
+        public WelcomeViewModel()
+        {
+            WelcomeAnimations = new List<AnimationModel>
+            {
+                new AnimationModel { AnimationFilename = "birds.json" }
+            };
+        }
+
+        public List<AnimationModel> WelcomeAnimations { get; set; }
     }
 }

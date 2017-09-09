@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+    <Compile Include="Models\AnimationModel.cs" />
     <Compile Include="Models\MainMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IocApplicationModule.cs" />
@@ -73,6 +74,7 @@
     <Folder Include=".Docs\" />
     <Folder Include="Commands\" />
     <Folder Include="Events\" />
+    <Folder Include="LottieFiles\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ItemListPage.xaml">

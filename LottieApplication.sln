@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application.csproj", "{26E89A3B-9852-4A18-96CC-1D5881FADAA1}"
 EndProject
@@ -20,6 +20,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F2A732D2-5EA3-4EF3-A516-0B2EB346081C}"
 	ProjectSection(SolutionItems) = preProject
 		ResourceLinks.txt = ResourceLinks.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LottieFiles", "LottieFiles", "{E131AC6C-48C6-4E71-B921-93AA70A5F0E0}"
+	ProjectSection(SolutionItems) = preProject
+		LottieFiles\birds.json = LottieFiles\birds.json
+		LottieFiles\give_a_nudge_onboarding_part1.json = LottieFiles\give_a_nudge_onboarding_part1.json
 	EndProjectSection
 EndProject
 Global
@@ -410,5 +416,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C14DF7-0AF5-485F-A20E-1898D1A1DC0B}
 	EndGlobalSection
 EndGlobal

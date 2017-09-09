@@ -139,6 +139,15 @@
     <Reference Include="SQLitePCLRaw.provider.sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62684c7b4f184e3f, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.8\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfRotator.iOS, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\Xamarin.iOS10\Syncfusion.SfRotator.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\Xamarin.iOS10\Syncfusion.SfRotator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms.iOS, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\Xamarin.iOS10\Syncfusion.SfRotator.XForms.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />

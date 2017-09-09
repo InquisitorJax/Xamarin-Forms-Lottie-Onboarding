@@ -726,7 +726,13 @@ namespace SampleApplication.Droid
 			global::Lottie.Forms.Droid.Resource.Drawable.abc_textfield_search_material = global::SampleApplication.Droid.Resource.Drawable.abc_textfield_search_material;
 			global::Lottie.Forms.Droid.Resource.Drawable.abc_vector_test = global::SampleApplication.Droid.Resource.Drawable.abc_vector_test;
 			global::Lottie.Forms.Droid.Resource.Drawable.avd_hide_password = global::SampleApplication.Droid.Resource.Drawable.avd_hide_password;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_hide_password_1 = global::SampleApplication.Droid.Resource.Drawable.avd_hide_password_1;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_hide_password_2 = global::SampleApplication.Droid.Resource.Drawable.avd_hide_password_2;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_hide_password_3 = global::SampleApplication.Droid.Resource.Drawable.avd_hide_password_3;
 			global::Lottie.Forms.Droid.Resource.Drawable.avd_show_password = global::SampleApplication.Droid.Resource.Drawable.avd_show_password;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_show_password_1 = global::SampleApplication.Droid.Resource.Drawable.avd_show_password_1;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_show_password_2 = global::SampleApplication.Droid.Resource.Drawable.avd_show_password_2;
+			global::Lottie.Forms.Droid.Resource.Drawable.avd_show_password_3 = global::SampleApplication.Droid.Resource.Drawable.avd_show_password_3;
 			global::Lottie.Forms.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::SampleApplication.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Lottie.Forms.Droid.Resource.Drawable.design_fab_background = global::SampleApplication.Droid.Resource.Drawable.design_fab_background;
 			global::Lottie.Forms.Droid.Resource.Drawable.design_ic_visibility = global::SampleApplication.Droid.Resource.Drawable.design_ic_visibility;
@@ -5393,6 +5399,9 @@ namespace SampleApplication.Droid
 			// aapt resource value: 0x7f070010
 			public const int abc_text_size_title_material_toolbar = 2131165200;
 			
+			// aapt resource value: 0x7f070094
+			public const int btn_Size = 2131165332;
+			
 			// aapt resource value: 0x7f070009
 			public const int cardview_compat_inset_shadow = 2131165193;
 			
@@ -5401,6 +5410,9 @@ namespace SampleApplication.Droid
 			
 			// aapt resource value: 0x7f07000b
 			public const int cardview_default_radius = 2131165195;
+			
+			// aapt resource value: 0x7f070095
+			public const int conc_circle = 2131165333;
 			
 			// aapt resource value: 0x7f070076
 			public const int design_appbar_elevation = 2131165302;
@@ -5522,6 +5534,9 @@ namespace SampleApplication.Droid
 			// aapt resource value: 0x7f07005b
 			public const int disabled_alpha_material_light = 2131165275;
 			
+			// aapt resource value: 0x7f070096
+			public const int dot_space = 2131165334;
+			
 			// aapt resource value: 0x7f07005c
 			public const int highlight_alpha_material_colored = 2131165276;
 			
@@ -5542,6 +5557,9 @@ namespace SampleApplication.Droid
 			
 			// aapt resource value: 0x7f070062
 			public const int hint_pressed_alpha_material_light = 2131165282;
+			
+			// aapt resource value: 0x7f070097
+			public const int inner_circle = 2131165335;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131165184;
@@ -5614,6 +5632,12 @@ namespace SampleApplication.Droid
 			
 			// aapt resource value: 0x7f07006d
 			public const int notification_top_pad_large_text = 2131165293;
+			
+			// aapt resource value: 0x7f070098
+			public const int outerCircle = 2131165336;
+			
+			// aapt resource value: 0x7f070099
+			public const int thumb_padding = 2131165337;
 			
 			static Dimension()
 			{
@@ -5880,8 +5904,26 @@ namespace SampleApplication.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f020110
+			public const int avd_hide_password_1 = 2130837776;
+			
+			// aapt resource value: 0x7f020111
+			public const int avd_hide_password_2 = 2130837777;
+			
+			// aapt resource value: 0x7f020112
+			public const int avd_hide_password_3 = 2130837778;
+			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
+			
+			// aapt resource value: 0x7f020113
+			public const int avd_show_password_1 = 2130837779;
+			
+			// aapt resource value: 0x7f020114
+			public const int avd_show_password_2 = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int avd_show_password_3 = 2130837781;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -7408,6 +7450,9 @@ namespace SampleApplication.Droid
 			
 			// aapt resource value: 0x7f090027
 			public const int abc_toolbar_collapse_description = 2131296295;
+			
+			// aapt resource value: 0x7f090040
+			public const int app_name = 2131296320;
 			
 			// aapt resource value: 0x7f090036
 			public const int appbar_scrolling_view_behavior = 2131296310;

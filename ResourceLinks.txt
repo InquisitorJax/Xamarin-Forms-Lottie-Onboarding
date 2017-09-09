@@ -1,5 +1,7 @@
 Entity Framework Core
 https://almirvuk.blogspot.co.za/2017/08/xamarinforms-and-entity-framework-core.html
+Syncfusion Nuget package source
+https://help.syncfusion.com/xamarin/introduction/download-and-installation
 Lottie:
 https://xamgirl.com/lottie-animations-step-by-step-in-xamarin-forms/
 Lottie Files short-list
@@ -20,5 +22,5 @@ https://www.lottiefiles.com/117-progress-bar
 https://www.lottiefiles.com/76-atm-link ZLC - get back to doing business
 https://www.lottiefiles.com/69-video-content-ta-dah
 https://www.lottiefiles.com/29-motorcycle
-Carousel View
+Carousel View (use Syncfusion rotator instead)
 http://15mgm15.ghost.io/2017/01/29/xamarin-forms-carousel-view-tutorial/

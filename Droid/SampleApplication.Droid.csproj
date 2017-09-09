@@ -99,6 +99,15 @@
     <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.8\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfRotator.Android, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\MonoAndroid10\Syncfusion.SfRotator.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\MonoAndroid10\Syncfusion.SfRotator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms.Android, Version=15.3451.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfRotator.15.3.0.29\lib\MonoAndroid10\Syncfusion.SfRotator.XForms.Android.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
@@ -203,6 +212,9 @@
     <Compile Include="AndroidDatabaseConnectionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="..\LottieFiles\birds.json">
+      <Link>Assets\birds.json</Link>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
