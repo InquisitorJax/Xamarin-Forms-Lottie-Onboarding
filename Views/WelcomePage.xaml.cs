@@ -1,9 +1,4 @@
 ﻿using Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,6 +11,8 @@ namespace SampleApplication.Views
         public WelcomePage()
         {
             InitializeComponent();
+            ViewModel = new WelcomeViewModel();
+            BindingContext = ViewModel;
         }
 
         public IViewModel ViewModel { get; set; }

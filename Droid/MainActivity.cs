@@ -8,13 +8,14 @@ using Xamarin.Forms.Platform.Android;
 
 namespace SampleApplication
 {
-    [Activity(Label = "Application.Droid", 
-	          Icon = "@drawable/icon", 
-	          MainLauncher = true, 
-	          ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    [Activity(Label = "Highrise Lottie",
+              Icon = "@drawable/icon",
+              Theme = "@style/splashscreen",
+              MainLauncher = true,
+              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-		//TODO: replace with Forms.Context
+        //TODO: replace with Forms.Context
         private static Context _appContext;
 
         public static Context AppContext
@@ -24,9 +25,11 @@ namespace SampleApplication
 
         protected override void OnCreate(Bundle bundle)
         {
-			FormsAppCompatActivity.ToolbarResource = Droid.Resource.Layout.toolbar;
-			FormsAppCompatActivity.TabLayoutResource = Droid.Resource.Layout.tabs;
+            FormsAppCompatActivity.ToolbarResource = Droid.Resource.Layout.toolbar;
+            FormsAppCompatActivity.TabLayoutResource = Droid.Resource.Layout.tabs;
 
+            //base.Window.RequestFeature(WindowFeatures.ActionBar);
+            base.SetTheme(Droid.Resource.Style.MyTheme); //set theme to Material AppCompat
             base.OnCreate(bundle);
 
             _appContext = this;

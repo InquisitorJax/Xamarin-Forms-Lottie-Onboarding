@@ -1,17 +1,18 @@
 ﻿using Autofac;
 using Core;
+using SampleApplication.Views;
 using System.Collections.Generic;
 
 namespace SampleApplication
 {
-    public class App : Xamarin.Forms.Application
+    public partial class App : Xamarin.Forms.Application
     {
         public App(Module platformModule)
         {
             //TODO: Incorporate Splash screen to await initialization, and then navigation to main page
             Initialize(platformModule);
             // The root page of your application
-            Navigation.NavigateAsync(Constants.Navigation.WelcomePage);
+            MainPage = new WelcomePage();
         }
 
         private INavigationService Navigation

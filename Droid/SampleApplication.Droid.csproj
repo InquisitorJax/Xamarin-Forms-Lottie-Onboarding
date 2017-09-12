@@ -114,6 +114,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="Toasts.Forms.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Toasts.Forms.Plugin.3.2.0\lib\MonoAndroid10\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
       <Private>True</Private>
@@ -215,6 +216,12 @@
     <AndroidAsset Include="..\LottieFiles\birds.json">
       <Link>Assets\birds.json</Link>
     </AndroidAsset>
+    <AndroidAsset Include="..\LottieFiles\nudge.json">
+      <Link>Assets\nudge.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\LottieFiles\stopwatch.json">
+      <Link>Assets\stopwatch.json</Link>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -242,6 +249,9 @@
     <AndroidResource Include="Resources\values-v21\style.xml" />
     <AndroidResource Include="Resources\layout\tabs.axml" />
     <AndroidResource Include="Resources\layout\toolbar.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

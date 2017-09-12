@@ -10,7 +10,9 @@ namespace SampleApplication
         {
             WelcomeAnimations = new List<AnimationModel>
             {
-                new AnimationModel { AnimationFilename = "birds.json" }
+                new AnimationModel { AnimationFilename = "birds.json", Description = "Track leads." },
+                new AnimationModel { AnimationFilename = "nudge.json", Description = "Manage follow-ups." },
+                new AnimationModel { AnimationFilename = "stopwatch.json", Description = "Zero learning curve!" },
             };
         }
 
