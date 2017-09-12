@@ -17,22 +17,43 @@
 
         <Grid BackgroundColor="{StaticResource PrimaryDark}">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Frame Margin="10,20,10,0"
+            <StackLayout Margin="0,7,0,0"
+                         HorizontalOptions="CenterAndExpand"
+                         Orientation="Horizontal">
+                <Image Margin="20,0,0,0"
+                       Aspect="AspectFill"
+                       HeightRequest="45"
+                       Source="ic_highrise_logo_text"
+                       VerticalOptions="Center"
+                       WidthRequest="45" />
+                <Label Margin="7,0,0,0"
+                       FontSize="Medium"
+                       Text="Simple CRM"
+                       TextColor="{StaticResource WindowBackground}"
+                       VerticalOptions="Center" />
+            </StackLayout>
+
+            <Frame Grid.Row="1"
+                   Margin="10,7,10,0"
                    BackgroundColor="{StaticResource WindowBackground}"
                    HasShadow="True">
 
                 <rotator:SfRotator x:Name="rotator"
                                    BackgroundColor="{StaticResource WindowBackground}"
+                                   DotsBorderColor="Transparent"
                                    ItemsSource="{Binding WelcomeAnimations}"
-                                   NavigationDelay="2000"
+                                   NavigationDelay="4000"
                                    NavigationDirection="Horizontal"
                                    NavigationStripMode="Dots"
-                                   NavigationStripPosition="Bottom">
+                                   NavigationStripPosition="Bottom"
+                                   SelectedDotColor="Accent"
+                                   UnselectedDotColor="{StaticResource Primary}">
                     <rotator:SfRotator.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -58,7 +79,7 @@
                 </rotator:SfRotator>
             </Frame>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="60*" />
                     <ColumnDefinition Width="40*" />
@@ -82,7 +103,7 @@
                         Text="sign up"
                         TextColor="White" />
             </Grid>
-            <Label Grid.Row="2"
+            <Label Grid.Row="3"
                    HeightRequest="30"
                    HorizontalOptions="Center"
                    Text="LEARN MORE ABOUT HIGHRISE"

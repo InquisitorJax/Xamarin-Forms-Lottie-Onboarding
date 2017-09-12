@@ -1,5 +1,5 @@
 ﻿using Core;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,5 +16,13 @@ namespace SampleApplication.Views
         }
 
         public IViewModel ViewModel { get; set; }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await Task.Delay(4000);
+            this.rotator.EnableAutoPlay = true;
+        }
     }
 }
