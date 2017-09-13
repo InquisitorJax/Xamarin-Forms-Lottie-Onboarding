@@ -65,6 +65,7 @@
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Models\SampleItemValidator.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Views\PageBase.cs" />
     <Compile Include="Views\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>

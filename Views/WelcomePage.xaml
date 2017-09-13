@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="SampleApplication.Views.WelcomePage"
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
-             xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms">
+<views:PageBase x:Class="SampleApplication.Views.WelcomePage"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+                xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+                xmlns:views="clr-namespace:SampleApplication.Views">
     <ContentPage.Resources>
         <ResourceDictionary>
             <!--  XForms bug: App.XAML global Primary throws exception when referenced from launch page  -->
             <Color x:Key="Primary">#87C6DE</Color>
             <Color x:Key="PrimaryDark">#5D98B0</Color>
             <Color x:Key="WindowBackground">#F5F5F5</Color>
-            <Color x:Key="Accent2">#15C44B</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -22,24 +22,32 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
 
-            <StackLayout Margin="0,7,0,0"
+            <StackLayout x:Name="_headerContainer"
+                         Margin="0,7,0,0"
                          HorizontalOptions="CenterAndExpand"
                          Orientation="Horizontal">
-                <Image Margin="20,0,0,0"
+                <Image x:Name="_logo"
+                       Margin="20,0,0,0"
                        Aspect="AspectFill"
                        HeightRequest="45"
                        Source="ic_highrise_logo_text"
                        VerticalOptions="Center"
                        WidthRequest="45" />
-                <Label Margin="7,0,0,0"
+                <Label x:Name="_lblLogo"
+                       Margin="7,0,0,0"
                        FontSize="Medium"
                        Text="Simple CRM"
                        TextColor="{StaticResource WindowBackground}"
                        VerticalOptions="Center" />
             </StackLayout>
 
-            <Frame Grid.Row="1"
+            <Frame x:Name="_lottieContainer"
+                   Grid.Row="1"
                    Margin="10,7,10,0"
                    BackgroundColor="{StaticResource WindowBackground}"
                    HasShadow="True">
@@ -48,7 +56,7 @@
                                    BackgroundColor="{StaticResource WindowBackground}"
                                    DotsBorderColor="Transparent"
                                    ItemsSource="{Binding WelcomeAnimations}"
-                                   NavigationDelay="4000"
+                                   NavigationDelay="3500"
                                    NavigationDirection="Horizontal"
                                    NavigationStripMode="Dots"
                                    NavigationStripPosition="Bottom"
@@ -65,7 +73,7 @@
                                        HorizontalOptions="Center"
                                        Style="{DynamicResource labelStyle}"
                                        Text="{Binding Description}"
-                                       TextColor="{StaticResource Accent2}"
+                                       TextColor="Accent"
                                        VerticalOptions="Center" />
                                 <lottie:AnimationView Grid.Row="1"
                                                       Animation="{Binding AnimationFilename}"
@@ -85,27 +93,33 @@
                     <ColumnDefinition Width="40*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="7,0,0,0"
+                <Button x:Name="_btnSignIn"
+                        Margin="7,0,0,0"
                         BackgroundColor="Accent"
                         BorderRadius="10"
                         Command="{Binding SignInCommand}"
                         HeightRequest="50"
                         HorizontalOptions="Fill"
+                        Opacity="0"
                         Text="sign in"
                         TextColor="White" />
 
-                <Button Grid.Column="1"
+                <Button x:Name="_btnSignUp"
+                        Grid.Column="1"
                         Margin="0,0,7,0"
                         BackgroundColor="{StaticResource Primary}"
                         Command="{Binding SignUpCommand}"
                         HeightRequest="50"
                         HorizontalOptions="Fill"
+                        Opacity="0"
                         Text="sign up"
                         TextColor="White" />
             </Grid>
-            <Label Grid.Row="3"
+            <Label x:Name="_lblLearnMore"
+                   Grid.Row="3"
                    HeightRequest="30"
                    HorizontalOptions="Center"
+                   Opacity="0"
                    Text="LEARN MORE ABOUT HIGHRISE"
                    TextColor="{StaticResource WindowBackground}"
                    VerticalOptions="Center">
@@ -115,4 +129,4 @@
             </Label>
         </Grid>
     </ContentPage.Content>
-</ContentPage>
+</views:PageBase>
