@@ -43,7 +43,7 @@ namespace SampleApplication.Views
                     _headerContainer.SetValue(Grid.RowProperty, 1);
                     _logo.WidthRequest = 100;
                     _logo.HeightRequest = 100;
-                    _lblLogo.FontSize = Font.SystemFontOfSize(NamedSize.Large).FontSize;
+                    _lblLogo.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
                     break;
 
                 case PageOrientation.Portrait:
@@ -51,12 +51,12 @@ namespace SampleApplication.Views
                     _lottieContainer.SetValue(Grid.RowProperty, 1);
                     _lottieContainer.SetValue(Grid.ColumnProperty, 0);
                     _lottieContainer.SetValue(Grid.RowSpanProperty, 1);
-                    _lottieContainer.WidthRequest = -1;
-                    _lottieContainer.HeightRequest = -1;
+                    _lottieContainer.WidthRequest = SizeNotSet;
+                    _lottieContainer.HeightRequest = SizeNotSet;
                     _headerContainer.SetValue(Grid.RowProperty, 0);
                     _logo.WidthRequest = 45;
                     _logo.HeightRequest = 45;
-                    _lblLogo.FontSize = Font.SystemFontOfSize(NamedSize.Medium).FontSize;
+                    _lblLogo.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
                     break;
             }
         }

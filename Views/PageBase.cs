@@ -10,6 +10,7 @@ namespace SampleApplication.Views
 
     public class PageBase : ContentPage
     {
+        protected const int SizeNotSet = -1;
         protected double _height;
         protected double _width;
 
@@ -30,7 +31,6 @@ namespace SampleApplication.Views
         protected override void OnSizeAllocated(double width, double height)
         {
             var oldWidth = _width;
-            const double sizenotallocated = -1;
 
             base.OnSizeAllocated(width, height);
             if (Equals(_width, width) && Equals(_height, height)) return;
@@ -38,8 +38,8 @@ namespace SampleApplication.Views
             _width = width;
             _height = height;
 
-            // ignore if the previous height was size unallocated
-            if (Equals(oldWidth, sizenotallocated)) return;
+            // ignore if the previous height was size not yet set
+            if (Equals(oldWidth, SizeNotSet)) return;
 
             // Has the device been rotated ?
             if (!Equals(width, oldWidth))
