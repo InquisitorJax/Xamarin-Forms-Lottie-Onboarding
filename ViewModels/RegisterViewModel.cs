@@ -15,7 +15,7 @@ namespace SampleApplication
 
         private void SignUp()
         {
-            Navigation.NavigateAsync(Constants.Navigation.MainPage);
+            Navigation.NavigateAsync(Constants.Navigation.MainPage, null, false, false, true);
         }
     }
 }

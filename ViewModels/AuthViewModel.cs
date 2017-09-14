@@ -19,7 +19,7 @@ namespace SampleApplication
 
         private void SignIn()
         {
-            Navigation.NavigateAsync(Constants.Navigation.MainPage);
+            Navigation.NavigateAsync(Constants.Navigation.MainPage, null, false, false, true);
         }
     }
 }

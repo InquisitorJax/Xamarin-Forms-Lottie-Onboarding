@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Android.Views;
 using Application.Droid;
 using Lottie.Forms.Droid;
 using Xamarin.Forms.Platform.Android;
@@ -28,7 +29,7 @@ namespace SampleApplication
             FormsAppCompatActivity.ToolbarResource = Droid.Resource.Layout.toolbar;
             FormsAppCompatActivity.TabLayoutResource = Droid.Resource.Layout.tabs;
 
-            //base.Window.RequestFeature(WindowFeatures.ActionBar);
+            base.Window.RequestFeature(WindowFeatures.ActionBar);
             base.SetTheme(Droid.Resource.Style.MyTheme); //set theme to Material AppCompat
             base.OnCreate(bundle);
 
