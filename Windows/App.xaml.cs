@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageCircle.Forms.Plugin.UWP;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -20,11 +21,6 @@ namespace SampleApplication.Windows
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-        }
-
-        private void CustomizeForXamarinForms(LaunchActivatedEventArgs e)
-        {
-            Xamarin.Forms.Forms.Init(e);
         }
 
         /// <summary>
@@ -72,6 +68,13 @@ namespace SampleApplication.Windows
             }
             // Ensure the current window is active
             Window.Current.Activate();
+        }
+
+        private void CustomizeForXamarinForms(LaunchActivatedEventArgs e)
+        {
+            Xamarin.Forms.Forms.Init(e);
+
+            ImageCircleRenderer.Init();
         }
 
         /// <summary>

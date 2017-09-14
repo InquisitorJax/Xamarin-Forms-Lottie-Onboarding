@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Application.Droid;
+using ImageCircle.Forms.Plugin.Droid;
 using Lottie.Forms.Droid;
 using Xamarin.Forms.Platform.Android;
 
@@ -38,6 +39,7 @@ namespace SampleApplication
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             AnimationViewRenderer.Init();
+            ImageCircleRenderer.Init();
 
             LoadApplication(new App(new IocAndroidModule()));
         }

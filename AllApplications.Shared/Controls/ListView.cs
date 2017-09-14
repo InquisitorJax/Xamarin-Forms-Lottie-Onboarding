@@ -1,14 +1,13 @@
 ﻿using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace Core
+namespace Core.Controls
 {
     /// <summary>
     /// ListView class that supports executing command when an item is tapped
     /// </summary>
     public class ListView : Xamarin.Forms.ListView
     {
-        //public static BindableProperty ItemClickCommandProperty = BindableProperty.Create<ListView, ICommand>(x => x.ItemClickCommand, null);
         public static BindableProperty ItemTapCommandProperty = BindableProperty.Create("ItemTapCommand", typeof(ICommand), typeof(ListView), null);
 
         public ListView()

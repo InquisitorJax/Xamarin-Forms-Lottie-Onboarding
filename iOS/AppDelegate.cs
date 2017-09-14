@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using Lottie.Forms.iOS.Renderers;
 using Syncfusion.SfRotator.XForms.iOS;
 using UIKit;
@@ -38,6 +39,7 @@ namespace SampleApplication.iOS
 
             new SfRotatorRenderer();
             AnimationViewRenderer.Init();
+            ImageCircleRenderer.Init();
 
             LoadApplication(new App(new IociOSModule()));
 

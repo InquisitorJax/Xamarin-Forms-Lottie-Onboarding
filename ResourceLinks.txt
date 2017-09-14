@@ -20,3 +20,6 @@ https://www.lottiefiles.com/76-atm-link ZLC - get back to doing business
 https://www.lottiefiles.com/69-video-content-ta-dah
 Carousel View (use Syncfusion rotator instead)
 http://15mgm15.ghost.io/2017/01/29/xamarin-forms-carousel-view-tutorial/
+
+Image Circle Plugin
+https://github.com/jamesmontemagno/ImageCirclePlugin

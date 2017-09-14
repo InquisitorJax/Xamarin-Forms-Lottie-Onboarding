@@ -108,6 +108,12 @@
       <HintPath>..\packages\FluentValidation.7.1.1\lib\netstandard1.0\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Lottie.Forms, Version=1.0.6442.27471, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Com.Airbnb.Xamarin.Forms.Lottie.2.3.2\lib\xamarinios\Lottie.Forms.dll</HintPath>
       <Private>True</Private>

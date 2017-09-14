@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CC.cs" />
+    <Compile Include="Controls\CommandView.cs" />
     <Compile Include="Controls\ListView.cs" />
     <Compile Include="Converters\ByteArrayToImageSourceConverter.cs" />
     <Compile Include="INavigationService.cs" />

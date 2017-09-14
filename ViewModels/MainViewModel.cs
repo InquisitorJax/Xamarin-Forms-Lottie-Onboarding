@@ -15,6 +15,7 @@ namespace SampleApplication
 
         private bool _listRefreshing;
 
+        private bool _mainMenuOpen;
         private SubscriptionToken _modelUpdatedEventToken;
 
         private ObservableCollection<SampleItem> _sampleItems;
@@ -27,20 +28,57 @@ namespace SampleApplication
             FetchSampleItemsCommand = new DelegateCommand(FetchSampleItems);
             OpenSelectedSampleItemCommand = new DelegateCommand(OpenSelectedSampleItemAsync);
             CreateSampleItemNavigationCommand = new DelegateCommand(CreateSampleItemNavigateAsync);
-            Title = "Sample Application For Xamarin Forms";
+            MainMenuItemClickCommand = new DelegateCommand<MainMenuItem>(MainMenuItemClick);
+            Title = "Xamarin Forms Onboarding with Lottie!";
 
             MainMenuItems = new List<MainMenuItem>();
             MainMenuItems.Add(new MainMenuItem
             {
-                Title = "The Flash",
-                IconSource = "flash.png",
-                ActionId = Constants.Navigation.TheFlashPage
+                Title = "Contacts",
+                IconSource = "ic_customer_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
             });
             MainMenuItems.Add(new MainMenuItem
             {
-                Title = "Green Lantern",
-                IconSource = "greenlantern.png",
+                Title = "Tasks",
+                IconSource = "ic_tasks_dark.png",
                 ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Cases",
+                IconSource = "ic_case_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Deals",
+                IconSource = "ic_deal_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Search",
+                IconSource = "ic_search_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Settings",
+                IconSource = "ic_settings_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Help",
+                IconSource = "ic_help_dark.png",
+                ActionId = Constants.Navigation.GreenLanternPage
+            });
+            MainMenuItems.Add(new MainMenuItem
+            {
+                Title = "Sign Out",
+                IconSource = "ic_sign_out_dark.png",
+                ActionId = Constants.Navigation.SignOut
             });
         }
 
@@ -53,7 +91,15 @@ namespace SampleApplication
             set { SetProperty(ref _listRefreshing, value); }
         }
 
+        public ICommand MainMenuItemClickCommand { get; private set; }
         public IList<MainMenuItem> MainMenuItems { get; private set; }
+
+        public bool MainMenuOpen
+        {
+            get { return _mainMenuOpen; }
+            set { SetProperty(ref _mainMenuOpen, value); }
+        }
+
         public ICommand OpenSelectedSampleItemCommand { get; private set; }
 
         public ObservableCollection<SampleItem> SampleItems
@@ -117,6 +163,21 @@ namespace SampleApplication
             }
         }
 
+        private async void MainMenuItemClick(MainMenuItem menuItem)
+        {
+            MainMenuOpen = false;
+
+            if (menuItem != null)
+            {
+                switch (menuItem.ActionId)
+                {
+                    case Constants.Navigation.SignOut:
+                        await SignoutAsync();
+                        break;
+                }
+            }
+        }
+
         private void OnSampleItemUpdated(ModelUpdatedMessageResult<SampleItem> updateResult)
         {
             SampleItems.UpdateCollection(updateResult.UpdatedModel, updateResult.UpdateEvent);
@@ -133,6 +194,11 @@ namespace SampleApplication
 
                 await Navigation.NavigateAsync(Constants.Navigation.ItemPage, args);
             }
+        }
+
+        private async Task SignoutAsync()
+        {
+            await Navigation.NavigateAsync(Constants.Navigation.AuthPage, null, false, false, true);
         }
     }
 }
