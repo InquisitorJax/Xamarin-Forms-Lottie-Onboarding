@@ -1,18 +1,41 @@
-﻿using Core;
-
+﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SampleApplication.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegisterPage : ContentPage, IView
+    public partial class RegisterPage : PageBase
     {
         public RegisterPage()
         {
             InitializeComponent();
         }
 
-        public IViewModel ViewModel { get; set; }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await Task.Delay(1000);
+            await _btnSignUp.FadeTo(1, 750, Easing.Linear);
+        }
+
+        protected override void OnPageOrientationUpdated()
+        {
+            base.OnPageOrientationUpdated();
+
+            switch (PageOrientation)
+            {
+                case PageOrientation.Landscape:
+                    _logo.WidthRequest = 40;
+                    _logo.HeightRequest = 40;
+                    break;
+
+                case PageOrientation.Portrait:
+                default:
+                    _logo.WidthRequest = 100;
+                    _logo.HeightRequest = 100;
+                    break;
+            }
+        }
     }
 }

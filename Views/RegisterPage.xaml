@@ -1,17 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="SampleApplication.Views.RegisterPage"
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<views:PageBase x:Class="SampleApplication.Views.RegisterPage"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:controls="clr-namespace:SampleApplication.Controls"
+                xmlns:views="clr-namespace:SampleApplication.Views"
+                Title="Create a new account">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#87C6DE</Color>
+            <Color x:Key="PrimaryDark">#5D98B0</Color>
+            <Color x:Key="Accent">#9F72D1</Color>
+            <Color x:Key="WindowBackground">#F5F5F5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="{StaticResource PrimaryDark}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Label HorizontalOptions="Center"
-                   Text="Auth PAGE"
-                   VerticalOptions="Center" />
+            <Image x:Name="_logo"
+                   Margin="0,20,0,0"
+                   Aspect="AspectFill"
+                   HeightRequest="100"
+                   HorizontalOptions="Center"
+                   Source="ic_highrise_logo_text"
+                   WidthRequest="100" />
+
+            <Frame Grid.Row="1"
+                   Margin="10,7,10,10"
+                   BackgroundColor="{StaticResource WindowBackground}"
+                   HasShadow="True">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <controls:EntryView EntryText="{Binding Model.Name}"
+                                        Keyboard="Text"
+                                        LabelText="Your name" />
+                    <controls:EntryView EntryText="{Binding Model.Email}"
+                                        Keyboard="Email"
+                                        LabelText="Email address" />
+
+                    <controls:EntryView EntryText="{Binding Model.TeamName}" LabelText="Company / Organization / Team name" />
+                    <controls:EntryView EntryText="{Binding Model.Password}"
+                                        IsPassword="True"
+                                        LabelText="Password" />
+                    <Button x:Name="_btnSignUp"
+                            Margin="7,0,7,0"
+                            BackgroundColor="Accent"
+                            BorderRadius="10"
+                            Command="{Binding SignUpCommand}"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill"
+                            Opacity="0"
+                            Text="Try Highrise for free!"
+                            TextColor="White" />
+                </StackLayout>
+            </Frame>
         </Grid>
     </ContentPage.Content>
-</ContentPage>
+</views:PageBase>

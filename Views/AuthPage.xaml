@@ -38,6 +38,8 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <StackLayout HorizontalOptions="CenterAndExpand">
+                        <controls:EntryView EntryText="{Binding Model.TeamName}" LabelText="Team Name" />
+
                         <controls:EntryView EntryText="{Binding Model.Username}"
                                             Keyboard="Email"
                                             LabelText="Username or email" />
@@ -55,15 +57,27 @@
                                 Text="Sign in"
                                 TextColor="White" />
                     </StackLayout>
-                    <Label Grid.Row="1"
-                           Margin="0,7,0,0"
-                           HorizontalOptions="End"
-                           Text="Help! I forgot my username or password"
-                           TextColor="{StaticResource Primary}">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ShowForgotCommand}" />
-                        </Label.GestureRecognizers>
-                    </Label>
+                    <StackLayout x:Name="_helpContainer"
+                                 Grid.Row="1"
+                                 HorizontalOptions="End">
+                        <Label Margin="0,7,7,0"
+                               HorizontalOptions="End"
+                               Text="Help! I forgot my team name :("
+                               TextColor="{StaticResource Primary}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowForgotCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Margin="0,7,7,0"
+                               HorizontalOptions="End"
+                               Text="Help! I forgot my username or password"
+                               TextColor="{StaticResource Primary}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowForgotCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
                 </Grid>
             </Frame>
 

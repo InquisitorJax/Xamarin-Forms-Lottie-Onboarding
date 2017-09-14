@@ -29,6 +29,7 @@ namespace SampleApplication.Views
                     _footerContainer.HeightRequest = 20;
                     _logo.WidthRequest = 40;
                     _logo.HeightRequest = 40;
+                    _helpContainer.Orientation = StackOrientation.Horizontal;
                     break;
 
                 case PageOrientation.Portrait:
@@ -36,6 +37,7 @@ namespace SampleApplication.Views
                     _footerContainer.HeightRequest = 100;
                     _logo.WidthRequest = 100;
                     _logo.HeightRequest = 100;
+                    _helpContainer.Orientation = StackOrientation.Vertical;
                     break;
             }
         }
