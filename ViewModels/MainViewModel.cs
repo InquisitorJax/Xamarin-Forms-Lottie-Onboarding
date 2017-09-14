@@ -90,6 +90,7 @@ namespace SampleApplication
         {
             await FetchSampleItemsAsync();
         }
+
         private async Task FetchSampleItemsAsync()
         {
             ListRefreshing = true;

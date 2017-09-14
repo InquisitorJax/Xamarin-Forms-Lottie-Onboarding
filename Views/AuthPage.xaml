@@ -1,15 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleApplication.Views.AuthPage">
+<views:PageBase x:Class="SampleApplication.Views.AuthPage"
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:controls="clr-namespace:SampleApplication.Controls"
+                xmlns:views="clr-namespace:SampleApplication.Views">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#87C6DE</Color>
+            <Color x:Key="PrimaryDark">#5D98B0</Color>
+            <Color x:Key="Accent">#9F72D1</Color>
+            <Color x:Key="WindowBackground">#F5F5F5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="{StaticResource PrimaryDark}">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Label Text="Auth PAGE" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Image x:Name="_logo"
+                   Margin="0,20,0,0"
+                   Aspect="AspectFill"
+                   HeightRequest="100"
+                   HorizontalOptions="Center"
+                   Source="ic_highrise_logo_text"
+                   WidthRequest="100" />
+
+            <Frame Grid.Row="1"
+                   Margin="10,7,10,0"
+                   BackgroundColor="{StaticResource WindowBackground}"
+                   HasShadow="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <controls:EntryView EntryText="{Binding Model.Username}"
+                                            Keyboard="Email"
+                                            LabelText="Username or email" />
+                        <controls:EntryView EntryText="{Binding Model.Password}"
+                                            IsPassword="True"
+                                            LabelText="Password" />
+                        <Button x:Name="_btnSignIn"
+                                Margin="7,0,7,0"
+                                BackgroundColor="Accent"
+                                BorderRadius="10"
+                                Command="{Binding SignInCommand}"
+                                HeightRequest="50"
+                                HorizontalOptions="Fill"
+                                Opacity="0"
+                                Text="Sign in"
+                                TextColor="White" />
+                    </StackLayout>
+                    <Label Grid.Row="1"
+                           Margin="0,7,0,0"
+                           HorizontalOptions="End"
+                           Text="Help! I forgot my username or password"
+                           TextColor="{StaticResource Primary}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowForgotCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Frame>
+
+            <StackLayout x:Name="_footerContainer"
+                         Grid.Row="2"
+                         Margin="0,0,7,7"
+                         HeightRequest="100"
+                         HorizontalOptions="End"
+                         Orientation="Horizontal">
+                <Image Margin="0,0,0,-5"
+                       Aspect="AspectFit"
+                       HeightRequest="30"
+                       HorizontalOptions="Center"
+                       Source="icon"
+                       VerticalOptions="End"
+                       WidthRequest="30" />
+
+                <Label FontSize="Small"
+                       Text="Help with Highrise"
+                       TextColor="{StaticResource WindowBackground}"
+                       VerticalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowHelpCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Margin="7,0,0,0"
+                       FontSize="Small"
+                       Text="Privacy Policy"
+                       TextColor="{StaticResource WindowBackground}"
+                       VerticalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowTermsCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Margin="7,0,0,0"
+                       FontSize="Small"
+                       Text="Terms of service"
+                       TextColor="{StaticResource WindowBackground}"
+                       VerticalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowPrivacyCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
-</ContentPage>
+</views:PageBase>

@@ -1,12 +1,11 @@
-﻿using Core;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SampleApplication.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WelcomePage : PageBase, IView
+    public partial class WelcomePage : PageBase
     {
         public WelcomePage()
         {
@@ -14,8 +13,6 @@ namespace SampleApplication.Views
             ViewModel = new WelcomeViewModel();
             BindingContext = ViewModel;
         }
-
-        public IViewModel ViewModel { get; set; }
 
         protected override async void OnAppearing()
         {

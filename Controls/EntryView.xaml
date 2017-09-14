@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SampleApplication.Controls.EntryView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SampleApplication.Controls"
+             x:Name="entry">
+    <ContentView.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android" Value="0, 0, 0, 0" />
+            <On Platform="WinPhone" Value="0, 10, 0, 0" />
+            <On Platform="Windows" Value="0, 10, 0, 0" />
+            <On Platform="iOS" Value="0, 7, 0, 0" />
+        </OnPlatform>
+    </ContentView.Padding>
+    <ContentView.Content>
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <controls:BooleanToInvertedBooleanConverter x:Key="bob" />
+                    <controls:NullValueToBooleanConverter x:Key="nvb" />
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Entry x:Name="_entry"
+                   Placeholder="{Binding LabelText, Source={x:Reference entry}}"
+                   Text="{Binding EntryText, Source={x:Reference entry}}" />
+            <Label x:Name="_label"
+                   Margin="2,5,0,0"
+                   FontSize="Micro"
+                   IsVisible="{Binding Text, Source={x:Reference _entry}, Converter={StaticResource nvb}, ConverterParameter=switch}"
+                   Text="{Binding LabelText, Source={x:Reference entry}}" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

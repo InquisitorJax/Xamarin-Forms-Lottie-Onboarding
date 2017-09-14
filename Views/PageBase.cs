@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Core;
+using Xamarin.Forms;
 
 namespace SampleApplication.Views
 {
@@ -8,7 +9,7 @@ namespace SampleApplication.Views
         Portrait = 1,
     }
 
-    public class PageBase : ContentPage
+    public class PageBase : ContentPage, IView
     {
         protected const int SizeNotSet = -1;
         protected double _height;
@@ -23,6 +24,8 @@ namespace SampleApplication.Views
         {
             get; set;
         }
+
+        public IViewModel ViewModel { get; set; }
 
         protected virtual void OnPageOrientationUpdated()
         {

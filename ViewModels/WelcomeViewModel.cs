@@ -1,4 +1,5 @@
 ﻿using Core;
+using Prism.Commands;
 using SampleApplication.Models;
 using System.Collections.Generic;
 using System.Windows.Input;
@@ -15,20 +16,31 @@ namespace SampleApplication
                 new AnimationModel { AnimationFilename = "nudge.json", Description = "Manage follow-ups." },
                 new AnimationModel { AnimationFilename = "stopwatch.json", Description = "Zero learning curve!" },
             };
+
+            SignUpCommand = new DelegateCommand(SignUp);
+            SignInCommand = new DelegateCommand(SignIn);
         }
 
         public ICommand SignInCommand { get; private set; }
+
         public ICommand SignUpCommand { get; private set; }
+
         public List<AnimationModel> WelcomeAnimations { get; set; }
 
         private void NavigateToAuthPage(bool signUp)
         {
-            string authParamsValue = signUp ? Constants.ParameterValues.AuthOptionSignUp : Constants.ParameterValues.AuthOptionSignIn;
-            var args = new Dictionary<string, string>
-            {
-                { Constants.Parameters.AuthOption, authParamsValue }
-            };
-            Navigation.NavigateAsync(Constants.Navigation.AuthPage, args);
+            string page = signUp ? Constants.Navigation.RegisterPage : Constants.Navigation.AuthPage;
+            Navigation.NavigateAsync(page, null, true, true);
+        }
+
+        private void SignIn()
+        {
+            NavigateToAuthPage(false);
+        }
+
+        private void SignUp()
+        {
+            NavigateToAuthPage(true);
         }
     }
 }
