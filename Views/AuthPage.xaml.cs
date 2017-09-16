@@ -27,6 +27,7 @@ namespace SampleApplication.Views
             {
                 case PageOrientation.Landscape:
                     _footerContainer.HeightRequest = 20;
+                    _logo.IsVisible = _height < 500;
                     _logo.WidthRequest = 40;
                     _logo.HeightRequest = 40;
                     _helpContainer.Orientation = StackOrientation.Horizontal;
@@ -35,6 +36,7 @@ namespace SampleApplication.Views
                 case PageOrientation.Portrait:
                 default:
                     _footerContainer.HeightRequest = 100;
+                    _logo.IsVisible = true;
                     _logo.WidthRequest = 100;
                     _logo.HeightRequest = 100;
                     _helpContainer.Orientation = StackOrientation.Vertical;

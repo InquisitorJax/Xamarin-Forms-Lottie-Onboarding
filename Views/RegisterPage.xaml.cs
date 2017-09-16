@@ -26,12 +26,14 @@ namespace SampleApplication.Views
             switch (PageOrientation)
             {
                 case PageOrientation.Landscape:
+                    _logo.IsVisible = _height < 500;
                     _logo.WidthRequest = 40;
                     _logo.HeightRequest = 40;
                     break;
 
                 case PageOrientation.Portrait:
                 default:
+                    _logo.IsVisible = true;
                     _logo.WidthRequest = 100;
                     _logo.HeightRequest = 100;
                     break;
