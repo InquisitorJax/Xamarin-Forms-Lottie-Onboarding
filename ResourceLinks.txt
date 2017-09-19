@@ -23,3 +23,7 @@ http://15mgm15.ghost.io/2017/01/29/xamarin-forms-carousel-view-tutorial/
 
 Image Circle Plugin
 https://github.com/jamesmontemagno/ImageCirclePlugin
+
+Slideover kit
+https://github.com/XAM-Consulting/SlideOverKit
+

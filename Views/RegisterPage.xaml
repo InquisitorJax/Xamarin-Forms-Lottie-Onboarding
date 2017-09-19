@@ -7,14 +7,14 @@
                 Title="Create a new account">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#87C6DE</Color>
-            <Color x:Key="PrimaryDark">#5D98B0</Color>
+            <Color x:Key="Primary">#5D98B0</Color>
+            <Color x:Key="PrimaryDark">#2F6897</Color>
             <Color x:Key="Accent">#9F72D1</Color>
             <Color x:Key="WindowBackground">#F5F5F5</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid BackgroundColor="{StaticResource PrimaryDark}">
+        <Grid BackgroundColor="{StaticResource Primary}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />

@@ -8,14 +8,14 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <!--  XForms bug: App.XAML global Primary throws exception when referenced from launch page  -->
-            <Color x:Key="Primary">#87C6DE</Color>
-            <Color x:Key="PrimaryDark">#5D98B0</Color>
+            <Color x:Key="Primary">#5D98B0</Color>
+            <Color x:Key="PrimaryDark">#2F6897</Color>
             <Color x:Key="WindowBackground">#F5F5F5</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
 
-        <Grid BackgroundColor="{StaticResource PrimaryDark}">
+        <Grid BackgroundColor="{StaticResource Primary}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -107,7 +107,7 @@
                 <Button x:Name="_btnSignUp"
                         Grid.Column="1"
                         Margin="0,0,7,0"
-                        BackgroundColor="{StaticResource Primary}"
+                        BackgroundColor="{StaticResource PrimaryDark}"
                         Command="{Binding SignUpCommand}"
                         HeightRequest="50"
                         HorizontalOptions="Fill"

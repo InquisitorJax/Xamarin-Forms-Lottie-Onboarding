@@ -21,7 +21,7 @@
                 <ic:CircleImage x:Name="ProfilePhoto"
                                 AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
                                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                                BorderColor="#5D98B0"
+                                BorderColor="#2F6897"
                                 BorderThickness="1"
                                 HeightRequest="90"
                                 Source="profile.png"

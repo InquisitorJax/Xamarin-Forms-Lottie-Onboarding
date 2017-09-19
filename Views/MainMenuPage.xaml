@@ -15,7 +15,7 @@
         <Grid BackgroundColor="#2795D9">
             <StackLayout VerticalOptions="FillAndExpand">
                 <controls:ListView x:Name="listView"
-                                   BackgroundColor="#5D98B0"
+                                   BackgroundColor="#2F6897"
                                    ItemTapCommand="{Binding MainMenuItemClickCommand}"
                                    ItemsSource="{Binding MainMenuItems}"
                                    SeparatorVisibility="None"
