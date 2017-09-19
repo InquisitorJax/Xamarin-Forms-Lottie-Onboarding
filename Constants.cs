@@ -18,5 +18,12 @@
         {
             public const string Id = "Id";
         }
+
+        public class ShareLinks
+        {
+            public const string HighriseHelp = "https://help.highrisehq.com/";
+            public const string PrivacyPolicy = "https://highrisehq.com/privacy/";
+            public const string TermsOfService = "https://highrisehq.com/terms/";
+        }
     }
 }

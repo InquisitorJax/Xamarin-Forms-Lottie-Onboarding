@@ -6,11 +6,12 @@
     "FluentValidation": "7.1.1",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "1.6.1",
+    "Plugin.Share": "7.0.1",
     "Prism.Core": "6.3.0",
     "sqlite-net-pcl": "1.4.118",
     "Syncfusion.Xamarin.SfListView": "15.3.0.29",
     "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-    "Toasts.Forms.Plugin": "3.2.0",
+    "Toasts.Forms.Plugin": "3.2.1",
     "Xam.Plugins.Forms.ImageCircle": "1.8.1",
     "Xamarin.Forms": "2.3.4.270"
   },

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Core;
+using SampleApplication.AppServices;
 using SampleApplication.Views;
 
 namespace SampleApplication
@@ -11,6 +12,8 @@ namespace SampleApplication
             base.Load(builder);
 
             builder.RegisterType<Repository>().As<IRepository>().AsSelf().SingleInstance();
+
+            builder.RegisterType<ShareService>().As<IShareService>().AsSelf();
 
             builder.RegisterType<ContactValidator>().As<IModelValidator<Contact>>().AsSelf();
 

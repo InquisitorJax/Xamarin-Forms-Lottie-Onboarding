@@ -410,6 +410,17 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        }
+      },
       "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
@@ -2577,7 +2588,7 @@
           }
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -2629,10 +2640,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -2648,7 +2660,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -3009,6 +3021,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -5249,7 +5272,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -5301,10 +5324,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -5320,7 +5344,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -5682,6 +5706,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -7957,7 +7992,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -8009,10 +8044,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -8028,7 +8064,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -8392,6 +8428,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -10638,7 +10685,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -10690,10 +10737,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -10709,7 +10757,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -11074,6 +11122,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -13355,7 +13414,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -13407,10 +13466,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -13426,7 +13486,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -13790,6 +13850,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -16036,7 +16107,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -16088,10 +16159,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -16107,7 +16179,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -16472,6 +16544,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.Share/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Prism.Core/6.3.0": {
@@ -18753,7 +18836,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Toasts.Forms.Plugin/3.2.0": {
+      "Toasts.Forms.Plugin/3.2.1": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.dll": {},
@@ -18805,10 +18888,11 @@
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
           "Xamarin.Forms": "2.3.4.270",
@@ -18824,7 +18908,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
-          "Toasts.Forms.Plugin": "3.2.0",
+          "Toasts.Forms.Plugin": "3.2.1",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -21288,6 +21372,40 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Plugin.Share/7.0.1": {
+      "sha512": "hWCtALkjPJnEBbqMeqV06+f2OtL+8AQgGtU/QTF9yxu7vF1DKX1PvkXtUZGLRl5lc+Af4k/jnpRDpFX90sdGVQ==",
+      "type": "package",
+      "path": "plugin.share/7.0.1",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Share.dll",
+        "lib/MonoAndroid10/Plugin.Share.pdb",
+        "lib/MonoAndroid10/Plugin.Share.xml",
+        "lib/UAP10/Plugin.Share.Abstractions.dll",
+        "lib/UAP10/Plugin.Share.Abstractions.pdb",
+        "lib/UAP10/Plugin.Share.Abstractions.xml",
+        "lib/UAP10/Plugin.Share.XML",
+        "lib/UAP10/Plugin.Share.dll",
+        "lib/UAP10/Plugin.Share.pdb",
+        "lib/UAP10/Plugin.Share.pri",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Share.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.xml",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Share.deps.json",
+        "lib/netstandard1.0/Plugin.Share.dll",
+        "lib/netstandard1.0/Plugin.Share.pdb",
+        "lib/netstandard1.0/Plugin.Share.xml",
+        "plugin.share.7.0.1.nupkg.sha512",
+        "plugin.share.nuspec"
       ]
     },
     "Prism.Core/6.3.0": {
@@ -27676,10 +27794,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Toasts.Forms.Plugin/3.2.0": {
-      "sha512": "UHlduRgpLw/ZZjpr/jqdMxTlhPtqr7OBhbZ0PthQXdnuhievNdg/9NK840W0HD+Hw0mhpDj1IcbYM5rOZ8FNSg==",
+    "Toasts.Forms.Plugin/3.2.1": {
+      "sha512": "4rPUkEMNPkBc0Hku/L3CMCBK1bPo/J8ExAFADgPcNBzoqzJVr2fZuOk1lr8HC3xbMwbOtb8yCWZhkhqni2Gb2g==",
       "type": "package",
-      "path": "toasts.forms.plugin/3.2.0",
+      "path": "toasts.forms.plugin/3.2.1",
       "files": [
         "lib/MonoAndroid10/Toasts.Forms.Plugin.Abstractions.dll",
         "lib/MonoAndroid10/Toasts.Forms.Plugin.Abstractions.pdb",
@@ -27694,7 +27812,7 @@
         "lib/uap10.0/Toasts.Forms.Plugin.Abstractions.pdb",
         "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll",
         "lib/uap10.0/Toasts.Forms.Plugin.UWP.pdb",
-        "toasts.forms.plugin.3.2.0.nupkg.sha512",
+        "toasts.forms.plugin.3.2.1.nupkg.sha512",
         "toasts.forms.plugin.nuspec"
       ]
     },
@@ -27919,10 +28037,11 @@
       "Com.Airbnb.Xamarin.Forms.Lottie >= 2.3.2",
       "FluentValidation >= 7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
+      "Plugin.Share >= 7.0.1",
       "Prism.Core >= 6.3.0",
       "Syncfusion.Xamarin.SfListView >= 15.3.0.29",
       "Syncfusion.Xamarin.SfRotator >= 15.3.0.29",
-      "Toasts.Forms.Plugin >= 3.2.0",
+      "Toasts.Forms.Plugin >= 3.2.1",
       "Xam.Plugins.Forms.ImageCircle >= 1.8.1",
       "Xamarin.Forms >= 2.3.4.270",
       "sqlite-net-pcl >= 1.4.118"
@@ -27968,11 +28087,12 @@
       "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
       "FluentValidation": "7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+      "Plugin.Share": "7.0.1",
       "Prism.Core": "6.3.0",
       "sqlite-net-pcl": "1.4.118",
       "Syncfusion.Xamarin.SfListView": "15.3.0.29",
       "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
-      "Toasts.Forms.Plugin": "3.2.0",
+      "Toasts.Forms.Plugin": "3.2.1",
       "Xam.Plugins.Forms.ImageCircle": "1.8.1",
       "Xamarin.Forms": "2.3.4.270"
     },

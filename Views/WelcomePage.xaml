@@ -124,7 +124,7 @@
                    TextColor="{StaticResource WindowBackground}"
                    VerticalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OpenHighriseWebCommand}" />
+                    <TapGestureRecognizer Command="{Binding OpenHighriseHelpCommand}" />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>

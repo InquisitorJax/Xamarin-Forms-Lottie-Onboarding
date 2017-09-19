@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+    <Compile Include="AppServices\IShareService.cs" />
     <Compile Include="Controls\BooleanToInvertedBooleanConverter.cs" />
     <Compile Include="Controls\EntryView.xaml.cs">
       <DependentUpon>EntryView.xaml</DependentUpon>
