@@ -11,20 +11,20 @@ namespace SampleApplication
     public class ItemViewModel : ViewModelBase
     {
         private readonly IRepository _repository;
-        private readonly IModelValidator<SampleItem> _validator;
+        private readonly IModelValidator<Contact> _validator;
 
         private bool _isNewModel;
 
-        private SampleItem _model;
+        private Contact _model;
 
-        public ItemViewModel(IRepository repository, IModelValidator<SampleItem> validator)
+        public ItemViewModel(IRepository repository, IModelValidator<Contact> validator)
         {
             _repository = repository;
             _validator = validator;
             SaveItemCommand = new DelegateCommand(SaveItemAsync);
         }
 
-        public SampleItem Model
+        public Contact Model
         {
             get { return _model; }
             set { SetProperty(ref _model, value); }
@@ -49,7 +49,7 @@ namespace SampleApplication
             }
             else
             { //assume new model required
-                Model = new SampleItem()
+                Model = new Contact()
                 {
                     Id = Guid.NewGuid().ToString()
                 };
@@ -73,8 +73,8 @@ namespace SampleApplication
             if (result.IsValid())
             {
                 var eventMessenger = CC.IoC.Resolve<IEventAggregator>();
-                ModelUpdatedMessageResult<SampleItem> eventResult = new ModelUpdatedMessageResult<SampleItem>() { UpdatedModel = Model, UpdateEvent = updateEvent };
-                eventMessenger.GetEvent<ModelUpdatedMessageEvent<SampleItem>>().Publish(eventResult);
+                ModelUpdatedMessageResult<Contact> eventResult = new ModelUpdatedMessageResult<Contact>() { UpdatedModel = Model, UpdateEvent = updateEvent };
+                eventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Publish(eventResult);
                 await Close();
             }
             else

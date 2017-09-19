@@ -12,7 +12,7 @@ namespace SampleApplication
 
             builder.RegisterType<Repository>().As<IRepository>().AsSelf().SingleInstance();
 
-            builder.RegisterType<SampleItemValidator>().As<IModelValidator<SampleItem>>().AsSelf();
+            builder.RegisterType<ContactValidator>().As<IModelValidator<Contact>>().AsSelf();
 
             builder.RegisterType<MainViewModel>().Keyed<IViewModel>(Constants.Navigation.MainPage);
             builder.RegisterType<ItemViewModel>().Keyed<IViewModel>(Constants.Navigation.ItemPage);

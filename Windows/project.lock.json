@@ -616,6 +616,50 @@
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
         "type": "package",
         "dependencies": {
@@ -2586,6 +2630,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -3425,6 +3470,50 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -5213,6 +5302,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -6088,6 +6178,50 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -7876,6 +8010,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -8724,6 +8859,50 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -10512,6 +10691,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -11398,6 +11578,50 @@
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
         "type": "package",
         "dependencies": {
@@ -13184,6 +13408,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -14032,6 +14257,50 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -15820,6 +16089,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -16704,6 +16974,50 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "15.3.0.29",
+          "Syncfusion.Xamarin.DataSource": "15.3.0.29",
+          "Syncfusion.Xamarin.GridCommon": "15.3.0.29",
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -18492,6 +18806,7 @@
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
           "Prism.Core": "6.3.0",
+          "Syncfusion.Xamarin.SfListView": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.0",
           "XForms.Shared": "1.0.0",
@@ -22204,6 +22519,59 @@
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.5.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.uwp10.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/15.3.0.29": {
+      "sha512": "gnY9b13ROGt7TPLANInuoZwjrlDMstgx7QHKcfXvWR4vUwFfsGMRay65iCM0Rueixk/+hLw+Xv+EaEfuAvmKsA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/15.3.0.29",
+      "files": [
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.XML",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "syncfusion.xamarin.core.15.3.0.29.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.DataSource/15.3.0.29": {
+      "sha512": "wCLUtF0tuUF79KYTE4XLyHZdy61aQobnW4sfln4947V1tXUUsqwncTs9QaDYmh368Jv8uTH3mhQpAPlqhhpYkw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datasource/15.3.0.29",
+      "files": [
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
+        "syncfusion.xamarin.datasource.15.3.0.29.nupkg.sha512",
+        "syncfusion.xamarin.datasource.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.GridCommon/15.3.0.29": {
+      "sha512": "5pzPOEEH1AIUA7kGHld9zgjDyTgMOcqcpUjFD/GyJGtMU42PaDY8POjVap/i+lb7YjX3b+t4C0pgGVF1xqh6MQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.gridcommon/15.3.0.29",
+      "files": [
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
+        "syncfusion.xamarin.gridcommon.15.3.0.29.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfListView/15.3.0.29": {
+      "sha512": "QCfIKcCzelF3U3b8ypbgWTKzzw3T4cnv9ebtAm9lxIJmnLR5QKYIiO8/cAYh344/sCqhweDHP8aOOBA1bqaMvg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sflistview/15.3.0.29",
+      "files": [
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
+        "syncfusion.xamarin.sflistview.15.3.0.29.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -27552,6 +27920,7 @@
       "FluentValidation >= 7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
       "Prism.Core >= 6.3.0",
+      "Syncfusion.Xamarin.SfListView >= 15.3.0.29",
       "Syncfusion.Xamarin.SfRotator >= 15.3.0.29",
       "Toasts.Forms.Plugin >= 3.2.0",
       "Xam.Plugins.Forms.ImageCircle >= 1.8.1",
@@ -27601,6 +27970,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
       "Prism.Core": "6.3.0",
       "sqlite-net-pcl": "1.4.118",
+      "Syncfusion.Xamarin.SfListView": "15.3.0.29",
       "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
       "Toasts.Forms.Plugin": "3.2.0",
       "Xam.Plugins.Forms.ImageCircle": "1.8.1",

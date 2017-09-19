@@ -2,10 +2,14 @@
 <ContentPage x:Class="SampleApplication.Views.ItemListPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Core.Controls;assembly=XForms.Shared"
-             xmlns:local="clr-namespace:SampleApplication">
+             xmlns:controls="clr-namespace:SampleApplication.Controls"
+             xmlns:local="clr-namespace:SampleApplication.Views"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:syncListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:views="clr-namespace:SampleApplication.Controls"
+             Title="Recent Activity">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding CreateSampleItemNavigationCommand}"
+        <ToolbarItem Command="{Binding CreateContactNavigationCommand}"
                      Order="Primary"
                      Priority="0">
             <ToolbarItem.Icon>
@@ -19,27 +23,78 @@
 
     <ContentPage.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <StackLayout>
-                <Label HorizontalOptions="CenterAndExpand" Text="{Binding Title}" />
-            </StackLayout>
-            <controls:ListView x:Name="_listView"
-                               Grid.Row="1"
-                               IsPullToRefreshEnabled="True"
-                               IsRefreshing="{Binding ListRefreshing}"
-                               ItemTapCommand="{Binding OpenSelectedSampleItemCommand}"
-                               ItemsSource="{Binding SampleItems}"
-                               RefreshCommand="{Binding FetchSampleItemsCommand}"
-                               SelectedItem="{Binding SelectedSampleItem, Mode=TwoWay}">
-                <controls:ListView.ItemTemplate>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <views:BooleanToInvertedBooleanConverter x:Key="bob" />
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <views:SfListViewEx x:Name="_listView"
+                                AllowSwiping="True"
+                                ItemSize="130"
+                                ItemSpacing="5,2,5,2"
+                                ItemTappedCommand="{Binding OpenSelectedActivityCommand}"
+                                ItemsSource="{Binding RecentActivities}"
+                                RightSwipeCommand="{Binding RemoveFromRecentsCommand}"
+                                SelectedItem="{Binding SelectedActivity}"
+                                SelectionMode="Single"
+                                SwipeOffset="200">
+                <syncListView:SfListView.RightSwipeTemplate>
                     <DataTemplate>
-                        <TextCell Detail="{Binding Description}" Text="{Binding Name}" />
+                        <Grid BackgroundColor="Accent"
+                              HorizontalOptions="Fill"
+                              VerticalOptions="Fill">
+                            <Image HeightRequest="45"
+                                   HorizontalOptions="Center"
+                                   Source="cancel_appointment_dark"
+                                   VerticalOptions="Center"
+                                   WidthRequest="45" />
+                        </Grid>
                     </DataTemplate>
-                </controls:ListView.ItemTemplate>
-            </controls:ListView>
+                </syncListView:SfListView.RightSwipeTemplate>
+                <views:SfListViewEx.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True">
+                            <views:ContactCard Value="{Binding .}" />
+                        </Frame>
+                    </DataTemplate>
+                </views:SfListViewEx.ItemTemplate>
+            </views:SfListViewEx>
+            <Grid IsVisible="{Binding HasActivities, Converter={StaticResource bob}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label x:Name="_lblLonely"
+                       Margin="0,20,0,0"
+                       FontSize="Medium"
+                       HorizontalOptions="Center"
+                       Opacity="0"
+                       Style="{DynamicResource labelStyle}"
+                       Text="It's lonely in here :("
+                       TextColor="Accent"
+                       VerticalOptions="Center" />
+
+                <Button x:Name="_btnCreateContact"
+                        Grid.Row="1"
+                        Margin="7,0,7,0"
+                        BackgroundColor="Accent"
+                        BorderRadius="10"
+                        Command="{Binding CreateContactNavigationCommand}"
+                        HeightRequest="50"
+                        HorizontalOptions="Fill"
+                        Opacity="0"
+                        Text="Create your first contact!"
+                        TextColor="White" />
+
+                <lottie:AnimationView Grid.Row="2"
+                                      Animation="empty_box.json"
+                                      AutoPlay="True"
+                                      HorizontalOptions="FillAndExpand"
+                                      Loop="true"
+                                      VerticalOptions="FillAndExpand" />
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

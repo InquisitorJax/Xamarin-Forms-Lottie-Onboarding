@@ -40,6 +40,7 @@
       <DependentUpon>EntryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\NullValueToBooleanConverter.cs" />
+    <Compile Include="Controls\SfListViewEx.cs" />
     <Compile Include="Models\AnimationModel.cs" />
     <Compile Include="Models\HighriseUser.cs" />
     <Compile Include="Models\MainMenuItem.cs" />
@@ -53,6 +54,9 @@
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
+    <Compile Include="Views\ContactCard.xaml.cs">
+      <DependentUpon>ContactCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
@@ -74,9 +78,9 @@
     <Compile Include="Views\ItemPage.xaml.cs">
       <DependentUpon>ItemPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\SampleItem.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Models\SampleItemValidator.cs" />
+    <Compile Include="Models\ContactValidator.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Views\PageBase.cs" />
     <Compile Include="Views\WelcomePage.xaml.cs">
@@ -152,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ProfileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ContactCard.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -7,13 +7,13 @@ namespace SampleApplication
 {
     public interface IRepository
     {
-        Task<FetchModelResult<SampleItem>> FetchSampleItemAsync(string id);
+        Task<FetchModelResult<Contact>> FetchSampleItemAsync(string id);
 
-        Task<FetchModelCollectionResult<SampleItem>> FetchSampleItemsAsync();
+        Task<FetchModelCollectionResult<Contact>> FetchSampleItemsAsync();
 
         Task Initialize();
 
-        Task<Notification> SaveSampleItemAsync(SampleItem item, ModelUpdateEvent updateEvent);
+        Task<Notification> SaveSampleItemAsync(Contact item, ModelUpdateEvent updateEvent);
     }
 
     public class Repository : IRepository
@@ -24,20 +24,20 @@ namespace SampleApplication
 
         private bool _isInitialized = false;
 
-        public async Task<FetchModelResult<SampleItem>> FetchSampleItemAsync(string id)
+        public async Task<FetchModelResult<Contact>> FetchSampleItemAsync(string id)
         {
-            FetchModelResult<SampleItem> retResult = new FetchModelResult<SampleItem>();
+            FetchModelResult<Contact> retResult = new FetchModelResult<Contact>();
 
-            var item = await _database.FindAsync<SampleItem>(id);
+            var item = await _database.FindAsync<Contact>(id);
             retResult.Model = item;
 
             return retResult;
         }
 
-        public async Task<FetchModelCollectionResult<SampleItem>> FetchSampleItemsAsync()
+        public async Task<FetchModelCollectionResult<Contact>> FetchSampleItemsAsync()
         {
-            FetchModelCollectionResult<SampleItem> retResult = new FetchModelCollectionResult<SampleItem>();
-            var items = await _database.Table<SampleItem>().ToListAsync();
+            FetchModelCollectionResult<Contact> retResult = new FetchModelCollectionResult<Contact>();
+            var items = await _database.Table<Contact>().ToListAsync();
             retResult.ModelCollection = items;
             return retResult;
         }
@@ -53,11 +53,11 @@ namespace SampleApplication
             if (connectionResult.IsValid())
             {
                 _database = connectionResult.Connection;
-                await _database.CreateTableAsync<SampleItem>();
+                await _database.CreateTableAsync<Contact>();
             }
         }
 
-        public async Task<Notification> SaveSampleItemAsync(SampleItem item, ModelUpdateEvent updateEvent)
+        public async Task<Notification> SaveSampleItemAsync(Contact item, ModelUpdateEvent updateEvent)
         {
             Notification retNotification = Notification.Success();
             try

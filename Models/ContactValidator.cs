@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace SampleApplication
 {
-    public class SampleItemValidator : ModelValidatorBase<SampleItem>
+    public class ContactValidator : ModelValidatorBase<Contact>
     {
-        public SampleItemValidator()
+        public ContactValidator()
         {
             RuleFor(item => item.Name).NotEmpty().WithMessage("Please provide a value for Name");
         }

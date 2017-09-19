@@ -1,14 +1,14 @@
 ﻿using Core;
+using System;
 
 namespace SampleApplication
 {
-    public class SampleItem : ModelBase
+    public class Contact : ModelBase
     {
         private string _description;
+
         private string _name;
-
-        private string _password;
-
+        private DateTime? _nextAppointmentDate;
         private byte[] _picture;
 
         public string Description
@@ -23,10 +23,10 @@ namespace SampleApplication
             set { SetProperty(ref _name, value); }
         }
 
-        public string Password
+        public DateTime? NextAppointmentDate
         {
-            get { return _password; }
-            set { SetProperty(ref _password, value); }
+            get { return _nextAppointmentDate; }
+            set { SetProperty(ref _nextAppointmentDate, value); }
         }
 
         public byte[] Picture

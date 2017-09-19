@@ -110,6 +110,15 @@
     <None Include="Application.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Images\fate.png">
+      <Link>Images\fate.png</Link>
+    </Content>
+    <Content Include="..\Images\manhattan.png">
+      <Link>Images\manhattan.png</Link>
+    </Content>
+    <Content Include="..\Images\strange.png">
+      <Link>Images\strange.png</Link>
+    </Content>
     <Content Include=".Docs\UWP_Issues.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

@@ -13,14 +13,15 @@ namespace SampleApplication
     {
         private readonly IRepository _repository;
 
+        private bool _hasActivities;
         private bool _listRefreshing;
 
         private bool _mainMenuOpen;
         private SubscriptionToken _modelUpdatedEventToken;
 
-        private ObservableCollection<SampleItem> _sampleItems;
+        private ObservableCollection<Contact> _recentActivities;
 
-        private SampleItem _selectedSampleItem;
+        private Contact _selectedSampleItem;
 
         public MainViewModel(IRepository repository)
         {
@@ -85,6 +86,12 @@ namespace SampleApplication
         public ICommand CreateSampleItemNavigationCommand { get; private set; }
         public ICommand FetchSampleItemsCommand { get; private set; }
 
+        public bool HasActivties
+        {
+            get { return _hasActivities; }
+            set { SetProperty(ref _hasActivities, value); }
+        }
+
         public bool ListRefreshing
         {
             get { return _listRefreshing; }
@@ -102,13 +109,22 @@ namespace SampleApplication
 
         public ICommand OpenSelectedSampleItemCommand { get; private set; }
 
-        public ObservableCollection<SampleItem> SampleItems
+        public ObservableCollection<Contact> RecentActivities
         {
-            get { return _sampleItems; }
-            set { SetProperty(ref _sampleItems, value); }
+            get { return _recentActivities; }
+            set
+            {
+                if (_recentActivities != null)
+                    _recentActivities.CollectionChanged -= RecentActivities_CollectionChanged;
+
+                SetProperty(ref _recentActivities, value);
+
+                if (_recentActivities != null)
+                    _recentActivities.CollectionChanged += RecentActivities_CollectionChanged;
+            }
         }
 
-        public SampleItem SelectedSampleItem
+        public Contact SelectedSampleItem
         {
             get { return _selectedSampleItem; }
             set { SetProperty(ref _selectedSampleItem, value); }
@@ -118,12 +134,12 @@ namespace SampleApplication
 
         public override void Closing()
         {
-            CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<SampleItem>>().Unsubscribe(_modelUpdatedEventToken);
+            CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Unsubscribe(_modelUpdatedEventToken);
         }
 
         public override async Task InitializeAsync(System.Collections.Generic.Dictionary<string, string> args)
         {
-            _modelUpdatedEventToken = CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<SampleItem>>().Subscribe(OnSampleItemUpdated);
+            _modelUpdatedEventToken = CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Subscribe(OnSampleItemUpdated);
             await FetchSampleItemsAsync();
         }
 
@@ -143,11 +159,11 @@ namespace SampleApplication
 
             try
             {
-                FetchModelCollectionResult<SampleItem> fetchResult = await _repository.FetchSampleItemsAsync();
+                FetchModelCollectionResult<Contact> fetchResult = await _repository.FetchSampleItemsAsync();
 
                 if (fetchResult.IsValid())
                 {
-                    SampleItems = fetchResult.ModelCollection.AsObservableCollection();
+                    RecentActivities = fetchResult.ModelCollection.AsObservableCollection();
 
                     ListRefreshing = false;
                 }
@@ -178,9 +194,9 @@ namespace SampleApplication
             }
         }
 
-        private void OnSampleItemUpdated(ModelUpdatedMessageResult<SampleItem> updateResult)
+        private void OnSampleItemUpdated(ModelUpdatedMessageResult<Contact> updateResult)
         {
-            SampleItems.UpdateCollection(updateResult.UpdatedModel, updateResult.UpdateEvent);
+            RecentActivities.UpdateCollection(updateResult.UpdatedModel, updateResult.UpdateEvent);
         }
 
         private async void OpenSelectedSampleItemAsync()
@@ -194,6 +210,11 @@ namespace SampleApplication
 
                 await Navigation.NavigateAsync(Constants.Navigation.ItemPage, args);
             }
+        }
+
+        private void RecentActivities_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            HasActivties = _recentActivities != null && _recentActivities.Count > 0;
         }
 
         private async Task SignoutAsync()
