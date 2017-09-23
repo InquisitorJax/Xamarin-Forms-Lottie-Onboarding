@@ -4,6 +4,7 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                       xmlns:controls="clr-namespace:Core.Controls;assembly=XForms.Shared"
                       xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+                      xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
                       x:Name="profileCard"
                       BackgroundColor="White"
                       HeightRequest="120">
@@ -37,11 +38,23 @@
             <AbsoluteLayout Grid.Column="1"
                             Padding="0,0,12,0"
                             HorizontalOptions="End"
-                            VerticalOptions="Start">
+                            VerticalOptions="End"
+                            WidthRequest="30">
                 <Image HeightRequest="30"
                        Source="icon"
                        WidthRequest="30" />
             </AbsoluteLayout>
+
+            <Grid Grid.Column="1"
+                  Margin="0,-30,-25,0"
+                  HorizontalOptions="EndAndExpand"
+                  VerticalOptions="StartAndExpand">
+                <lottie:AnimationView Animation="alarm.json"
+                                      AutoPlay="True"
+                                      HeightRequest="100"
+                                      Loop="True"
+                                      WidthRequest="100" />
+            </Grid>
         </Grid>
     </ContentView.Content>
 </controls:CommandView>

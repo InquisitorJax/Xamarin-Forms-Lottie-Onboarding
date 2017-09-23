@@ -5,41 +5,43 @@
                       xmlns:controls="clr-namespace:Core.Controls;assembly=XForms.Shared"
                       x:Name="ContactCard">
     <ContentView.Content>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Image HeightRequest="100"
-                   HorizontalOptions="End"
-                   Source="{Binding Value.Picture, Source={x:Reference ContactCard}}"
-                   WidthRequest="100" />
+        <Frame HasShadow="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image HeightRequest="100"
+                       HorizontalOptions="End"
+                       Source="{Binding Value.PictureName, Source={x:Reference ContactCard}}"
+                       WidthRequest="100" />
 
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label Text="{Binding Value.Name, Source={x:Reference ContactCard}}" />
-                <Label Grid.Row="1"
-                       FontSize="Micro"
-                       Text="{Binding Value.Description, Source={x:Reference ContactCard}}"
-                       TextColor="Silver" />
-                <Grid Grid.Row="2" HorizontalOptions="EndAndExpand">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Image HeightRequest="35"
-                           HorizontalOptions="End"
-                           Source="calendar"
-                           WidthRequest="35" />
-                    <Label Grid.Column="1"
-                           Text="{Binding Value.NextAppointmentDate, StringFormat='{0:MMMM d, yyyy HH:mm}', Source={x:Reference ContactCard}}"
-                           VerticalOptions="Center" />
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Text="{Binding Value.Name, Source={x:Reference ContactCard}}" />
+                    <Label Grid.Row="1"
+                           FontSize="Micro"
+                           Text="{Binding Value.Description, Source={x:Reference ContactCard}}"
+                           TextColor="Silver" />
+                    <Grid Grid.Row="2" HorizontalOptions="EndAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image HeightRequest="35"
+                               HorizontalOptions="End"
+                               Source="calendar"
+                               WidthRequest="35" />
+                        <Label Grid.Column="1"
+                               Text="{Binding Value.Notes, StringFormat='{0:MMMM d, yyyy HH:mm}', Source={x:Reference ContactCard}}"
+                               VerticalOptions="Center" />
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
+        </Frame>
     </ContentView.Content>
 </controls:CommandView>

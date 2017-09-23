@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
@@ -6,6 +7,7 @@ using Android.Views;
 using Application.Droid;
 using ImageCircle.Forms.Plugin.Droid;
 using Lottie.Forms.Droid;
+using Plugin.MediaManager.Forms.Android;
 using Xamarin.Forms.Platform.Android;
 
 namespace SampleApplication
@@ -40,6 +42,9 @@ namespace SampleApplication
 
             AnimationViewRenderer.Init();
             ImageCircleRenderer.Init();
+            UserDialogs.Init(this);
+            Plugin.Toasts.ToastNotification.Init(this);
+            VideoViewRenderer.Init();
 
             LoadApplication(new App(new IocAndroidModule()));
         }

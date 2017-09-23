@@ -7,13 +7,19 @@ namespace SampleApplication
 {
     public interface IRepository
     {
-        Task<FetchModelResult<Contact>> FetchSampleItemAsync(string id);
+        Task<Notification> DeleteContactAsync(Contact item);
 
-        Task<FetchModelCollectionResult<Contact>> FetchSampleItemsAsync();
+        Task<FetchModelResult<Contact>> FetchContactAsync(string id);
+
+        Task<FetchModelCollectionResult<Contact>> FetchContactsAsync();
+
+        Task<HighriseUser> FetchHighriseUserAsync();
 
         Task Initialize();
 
-        Task<Notification> SaveSampleItemAsync(Contact item, ModelUpdateEvent updateEvent);
+        Task<Notification> SaveContactAsync(Contact item, ModelUpdateEvent updateEvent);
+
+        Task<Notification> SaveHighriseUserAsyc(HighriseUser user);
     }
 
     public class Repository : IRepository
@@ -24,7 +30,23 @@ namespace SampleApplication
 
         private bool _isInitialized = false;
 
-        public async Task<FetchModelResult<Contact>> FetchSampleItemAsync(string id)
+        public async Task<Notification> DeleteContactAsync(Contact item)
+        {
+            Notification retNotification = Notification.Success();
+            try
+            {
+                await _database.DeleteAsync(item);
+            }
+            catch (SQLiteException)
+            {
+                //LOG:
+                retNotification.Add(new NotificationItem("Save Failed"));
+            }
+
+            return retNotification;
+        }
+
+        public async Task<FetchModelResult<Contact>> FetchContactAsync(string id)
         {
             FetchModelResult<Contact> retResult = new FetchModelResult<Contact>();
 
@@ -34,12 +56,18 @@ namespace SampleApplication
             return retResult;
         }
 
-        public async Task<FetchModelCollectionResult<Contact>> FetchSampleItemsAsync()
+        public async Task<FetchModelCollectionResult<Contact>> FetchContactsAsync()
         {
             FetchModelCollectionResult<Contact> retResult = new FetchModelCollectionResult<Contact>();
             var items = await _database.Table<Contact>().ToListAsync();
             retResult.ModelCollection = items;
             return retResult;
+        }
+
+        public async Task<HighriseUser> FetchHighriseUserAsync()
+        {
+            var user = await _database.Table<HighriseUser>().FirstAsync();
+            return user;
         }
 
         public async Task Initialize()
@@ -54,10 +82,22 @@ namespace SampleApplication
             {
                 _database = connectionResult.Connection;
                 await _database.CreateTableAsync<Contact>();
+                await _database.CreateTableAsync<HighriseUser>();
+
+                var userCount = await _database.Table<HighriseUser>().CountAsync();
+                if (userCount == 0)
+                {
+                    var user = new HighriseUser
+                    {
+                        Name = "Inquisitor Jax",
+                        Description = "Highrise user"
+                    };
+                    await _database.InsertAsync(user);
+                }
             }
         }
 
-        public async Task<Notification> SaveSampleItemAsync(Contact item, ModelUpdateEvent updateEvent)
+        public async Task<Notification> SaveContactAsync(Contact item, ModelUpdateEvent updateEvent)
         {
             Notification retNotification = Notification.Success();
             try
@@ -70,6 +110,22 @@ namespace SampleApplication
                 {
                     await _database.UpdateAsync(item);
                 }
+            }
+            catch (SQLiteException)
+            {
+                //LOG:
+                retNotification.Add(new NotificationItem("Save Failed"));
+            }
+
+            return retNotification;
+        }
+
+        public async Task<Notification> SaveHighriseUserAsyc(HighriseUser user)
+        {
+            Notification retNotification = Notification.Success();
+            try
+            {
+                await _database.UpdateAsync(user);
             }
             catch (SQLiteException)
             {

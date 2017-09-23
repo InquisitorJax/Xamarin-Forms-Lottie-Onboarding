@@ -1,7 +1,9 @@
 ﻿using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
 using Lottie.Forms.iOS.Renderers;
+using Plugin.MediaManager.Forms.iOS;
 using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfRadialMenu.XForms.iOS;
 using Syncfusion.SfRotator.XForms.iOS;
 using UIKit;
 using Xamarin.Forms;
@@ -38,10 +40,13 @@ namespace SampleApplication.iOS
 
             Forms.Init();
 
+            //Initialize all the custom renderers
             new SfRotatorRenderer();
             AnimationViewRenderer.Init();
             ImageCircleRenderer.Init();
             SfListViewRenderer.Init();
+            SfRadialMenuRenderer.Init();
+            VideoViewRenderer.Init();
 
             LoadApplication(new App(new IociOSModule()));
 

@@ -1,16 +1,20 @@
 ﻿{
   "dependencies": {
+    "Acr.UserDialogs": "6.5.1",
     "Autofac": "4.6.1",
     "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
     "FluentValidation": "7.1.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+    "Plugin.MediaManager.Forms": "0.4.3",
     "Plugin.Share": "7.0.1",
     "Prism.Core": "6.3.0",
     "sqlite-net-pcl": "1.4.118",
     "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+    "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
     "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
     "Toasts.Forms.Plugin": "3.2.1",
     "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+    "Xam.Plugins.Messaging": "4.0.0",
     "Xamarin.Forms": "2.3.4.270"
   },
   "frameworks": {

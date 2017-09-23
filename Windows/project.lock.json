@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.10240": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -13,6 +28,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -410,6 +436,32 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        }
+      },
       "Plugin.Share/7.0.1": {
         "type": "package",
         "compile": {
@@ -554,6 +606,15 @@
           }
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -669,6 +730,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -2613,6 +2686,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -2635,18 +2719,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -2655,6 +2743,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -2667,6 +2756,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-arm": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -2678,6 +2782,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -3021,6 +3136,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -3433,6 +3574,15 @@
           "runtimes/win8-arm/native/clrcompression.dll": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -3537,6 +3687,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -5297,6 +5459,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -5319,18 +5492,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -5339,6 +5516,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -5351,6 +5529,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-arm-aot": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -5362,6 +5555,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -5706,6 +5910,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -6153,6 +6383,15 @@
           "runtimes/win8-arm-aot/native/_._": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -6257,6 +6496,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -8017,6 +8268,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -8039,18 +8301,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -8059,6 +8325,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -8071,6 +8338,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x64": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -8082,6 +8364,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -8428,6 +8721,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -8846,6 +9165,15 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -8950,6 +9278,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -10710,6 +11050,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -10732,18 +11083,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -10752,6 +11107,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -10764,6 +11120,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x64-aot": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -10775,6 +11146,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -11122,6 +11504,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -11575,6 +11983,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -11679,6 +12096,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -13439,6 +13868,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -13461,18 +13901,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -13481,6 +13925,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -13493,6 +13938,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x86": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -13504,6 +13964,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -13850,6 +14321,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -14268,6 +14765,15 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -14372,6 +14878,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -16132,6 +16650,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -16154,18 +16683,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -16174,6 +16707,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -16186,6 +16720,21 @@
       }
     },
     "UAP,Version=v10.0.10240/win10-x86-aot": {
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Coding4Fun.Toolkit.Controls": "[2.1.8, 3.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Acr.UserDialogs.Interface.dll": {},
+          "lib/uap10.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Autofac/4.6.1": {
         "type": "package",
         "dependencies": {
@@ -16197,6 +16746,17 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -16544,6 +17104,32 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "[0.4.3]",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "Plugin.Share/7.0.1": {
@@ -16997,6 +17583,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Win81+Wpa81/Splat.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
@@ -17101,6 +17696,18 @@
         "runtime": {
           "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll": {},
           "lib/uap10.0/Syncfusion.SfListView.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.3.180"
+        },
+        "compile": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -18861,6 +19468,17 @@
           "lib/UAP10/ImageCircle.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Xam.Plugins.Messaging/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Messaging.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Messaging.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.270": {
         "type": "package",
         "compile": {
@@ -18883,18 +19501,22 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Plugin.MediaManager.Forms": "0.4.3",
           "Plugin.Share": "7.0.1",
           "Prism.Core": "6.3.0",
           "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+          "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
           "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
           "Toasts.Forms.Plugin": "3.2.1",
           "XForms.Shared": "1.0.0",
           "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+          "Xam.Plugins.Messaging": "4.0.0",
           "Xamarin.Forms": "2.3.4.270",
           "sqlite-net-pcl": "1.4.118"
         }
@@ -18903,6 +19525,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.4",
         "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -18916,6 +19539,40 @@
     }
   },
   "libraries": {
+    "Acr.UserDialogs/6.5.1": {
+      "sha512": "Y0GGF+TuG+JOMe//LiNlrr2Hf+nD3/Irlie15pjkzspcR59WEi6N1UT4ZZNaQVE7fYrddTTnAsSco9XD6TbvNg==",
+      "type": "package",
+      "path": "acr.userdialogs/6.5.1",
+      "files": [
+        "acr.userdialogs.6.5.1.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/MonoAndroid10/Acr.UserDialogs.Interface.dll",
+        "lib/MonoAndroid10/Acr.UserDialogs.Interface.pdb",
+        "lib/MonoAndroid10/Acr.UserDialogs.dll",
+        "lib/MonoAndroid10/Acr.UserDialogs.pdb",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.pdb",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.dll",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.pdb",
+        "lib/netstandard1.1/Acr.UserDialogs.Interface.dll",
+        "lib/netstandard1.1/Acr.UserDialogs.Interface.pdb",
+        "lib/netstandard1.1/Acr.UserDialogs.deps.json",
+        "lib/netstandard1.1/Acr.UserDialogs.dll",
+        "lib/netstandard1.1/Acr.UserDialogs.pdb",
+        "lib/uap10.0/Acr.UserDialogs.Interface.dll",
+        "lib/uap10.0/Acr.UserDialogs.Interface.pdb",
+        "lib/uap10.0/Acr.UserDialogs.dll",
+        "lib/uap10.0/Acr.UserDialogs.pdb",
+        "lib/uap10.0/Acr.UserDialogs.pri",
+        "lib/uap10.0/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/uap10.0/Acr.UserDialogs/ActionSheetContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/DatePickerControl.xaml",
+        "lib/uap10.0/Acr.UserDialogs/LoginContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/ProgressContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/Properties/Acr.UserDialogs.rd.xml",
+        "lib/uap10.0/Acr.UserDialogs/TimePickerControl.xaml"
+      ]
+    },
     "Autofac/4.6.1": {
       "sha512": "/feXiAKiSe9XLK+fdnz0p1iDg6JCkOhjqMkw9ewGy0f6IzXgmPLDRa4FUg6nIGRm2sTO677w/76uJ5OJU6EiyA==",
       "type": "package",
@@ -18927,6 +19584,45 @@
         "lib/net45/Autofac.xml",
         "lib/netstandard1.1/Autofac.dll",
         "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Coding4Fun.Toolkit.Controls/2.1.8": {
+      "sha512": "PCRWgCiW9H8qzT8xYxNtpq4ZWpvh2gtrKAnWtEOXzapyXTEt8esCt0cqRwvosW+bytyfohonmB7UxB0EGXmdsQ==",
+      "type": "package",
+      "path": "coding4fun.toolkit.controls/2.1.8",
+      "files": [
+        "coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
+        "coding4fun.toolkit.controls.nuspec",
+        "content/ReadMe.Coding4Fun.Toolkit.txt",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Cancel.png",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Check.png",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.pri",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/netcore451/Coding4Fun.Toolkit.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.pri",
+        "lib/windowsphone8/Coding4Fun.Toolkit.Controls.dll",
+        "lib/windowsphone8/Coding4Fun.Toolkit.dll",
+        "lib/windowsphone8/cs/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/da/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/de/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/es/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/hu/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/it/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ko/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/no/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pl/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pt/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ru/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/sk/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.pri",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/wpa81/Coding4Fun.Toolkit.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.pri"
       ]
     },
     "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
@@ -21374,6 +22070,59 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Plugin.MediaManager/0.4.3": {
+      "sha512": "qZquagaRJXJw+WhYs+8AXBySk62gD3kJln2cer3oxKUFOH8+w8OVzPYFfZphHub9GygqzEE34gvhxf+i24tmuA==",
+      "type": "package",
+      "path": "plugin.mediamanager/0.4.3",
+      "files": [
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.xml",
+        "lib/MonoAndroid/Plugin.MediaManager.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.dll",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.xml",
+        "lib/uap10.0/Plugin.MediaManager.XML",
+        "lib/uap10.0/Plugin.MediaManager.dll",
+        "lib/uap10.0/Plugin.MediaManager.pdb",
+        "lib/uap10.0/Properties/Plugin.MediaManager.UWP.rd.xml",
+        "plugin.mediamanager.0.4.3.nupkg.sha512",
+        "plugin.mediamanager.nuspec"
+      ]
+    },
+    "Plugin.MediaManager.Forms/0.4.3": {
+      "sha512": "ZlTKTQ9y5MvTbXQ3byR/UXj8z86xbXCzwih15xOKNMtcb0w82O2CRGe9G5gjsiZf/vxbP/IhnpD1parpadePng==",
+      "type": "package",
+      "path": "plugin.mediamanager.forms/0.4.3",
+      "files": [
+        "lib/MonoAndroid/Plugin.MediaManager.Forms.Android.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.Forms.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Forms.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.pdb",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.pri",
+        "lib/uap10.0/Plugin.MediaManager.Forms.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.pdb",
+        "lib/uap10.0/Plugin.MediaManager.XamarinForms.UWP.rd.xml",
+        "lib/xamarinios/Plugin.MediaManager.Forms.dll",
+        "lib/xamarinios/Plugin.MediaManager.Forms.iOS.dll",
+        "plugin.mediamanager.forms.0.4.3.nupkg.sha512",
+        "plugin.mediamanager.forms.nuspec"
+      ]
+    },
     "Plugin.Share/7.0.1": {
       "sha512": "hWCtALkjPJnEBbqMeqV06+f2OtL+8AQgGtU/QTF9yxu7vF1DKX1PvkXtUZGLRl5lc+Af4k/jnpRDpFX90sdGVQ==",
       "type": "package",
@@ -22531,6 +23280,33 @@
         "runtimes/win8-arm/native/clrcompression.dll"
       ]
     },
+    "Splat/2.0.0": {
+      "sha512": "nu/hT3AaKHJvMlCTrbR2EG1n6nzOejbJsvx/LWiy7kM4PK7R/GdrtP5KN8VcXfi1x+mbPA3Mqcbe992D7DppyA==",
+      "type": "package",
+      "path": "splat/2.0.0",
+      "files": [
+        "lib/MonoAndroid403/Splat.dll",
+        "lib/Net45/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Xamarin.Mac20/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/netstandard1.1/Splat.dll",
+        "splat.2.0.0.nupkg.sha512",
+        "splat.nuspec",
+        "src/AssemblyFinder.cs",
+        "src/Bitmaps.cs",
+        "src/Logging.cs",
+        "src/MemoizingMRUCache.cs",
+        "src/ModeDetector.cs",
+        "src/PlatformModeDetector.cs",
+        "src/PointExtensions.cs",
+        "src/RectangleExtensions.cs",
+        "src/ReflectionStubs.cs",
+        "src/ServiceLocation.cs",
+        "src/SizeExtensions.cs",
+        "src/TypeForwardedSystemDrawing.cs"
+      ]
+    },
     "sqlite-net-pcl/1.4.118": {
       "sha512": "66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
       "type": "package",
@@ -22690,6 +23466,24 @@
         "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
         "syncfusion.xamarin.sflistview.15.3.0.29.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRadialMenu/15.3.0.29": {
+      "sha512": "crC6JgNDELBfE6aEUU4z9Z6q3tx7pbmaYr3NRFEs+21VzI0fB3kStOpcZU3hxLYO0kr80lpwSBHJqsEETYzFQA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfradialmenu/15.3.0.29",
+      "files": [
+        "lib/MonoAndroid10/Syncfusion.SfRadialMenu.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.SfRadialMenu.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfRadialMenu.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfRadialMenu.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRadialMenu.iOS.xml",
+        "lib/portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Syncfusion.SfRadialMenu.XForms.dll",
+        "syncfusion.xamarin.sfradialmenu.15.3.0.29.nupkg.sha512",
+        "syncfusion.xamarin.sfradialmenu.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfRotator/15.3.0.29": {
@@ -27862,6 +28656,43 @@
         "xam.plugins.forms.imagecircle.nuspec"
       ]
     },
+    "Xam.Plugins.Messaging/4.0.0": {
+      "sha512": "b3Y69JzFhg4QyLDiM5vHnrrQ1SBc7aaZqpRVR3j8BTmxtx+roAj24ko4JgpeSpm8i59RxC+nldEaqDgvKnjv2w==",
+      "type": "package",
+      "path": "xam.plugins.messaging/4.0.0",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Messaging.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Messaging.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Messaging.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Messaging.dll",
+        "lib/MonoAndroid10/Plugin.Messaging.pdb",
+        "lib/MonoAndroid10/Plugin.Messaging.xml",
+        "lib/UAP10/Plugin.Messaging.Abstractions.dll",
+        "lib/UAP10/Plugin.Messaging.Abstractions.pdb",
+        "lib/UAP10/Plugin.Messaging.Abstractions.xml",
+        "lib/UAP10/Plugin.Messaging.dll",
+        "lib/UAP10/Plugin.Messaging.pdb",
+        "lib/UAP10/Plugin.Messaging.xml",
+        "lib/Xamarin.iOS10/Plugin.Messaging.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Messaging.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Messaging.dll",
+        "lib/Xamarin.iOS10/Plugin.Messaging.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.Abstractions.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.Messaging.xml",
+        "lib/win8/Plugin.Messaging.Abstractions.dll",
+        "lib/win8/Plugin.Messaging.Abstractions.pdb",
+        "lib/win8/Plugin.Messaging.Abstractions.xml",
+        "lib/win8/Plugin.Messaging.dll",
+        "lib/win8/Plugin.Messaging.pdb",
+        "lib/win8/Plugin.Messaging.xml",
+        "xam.plugins.messaging.4.0.0.nupkg.sha512",
+        "xam.plugins.messaging.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.3.4.270": {
       "sha512": "D4QNulRsghAnjGefCuxvHaH9xLdk9gmSrqSoyIH9YqRa/+HNil7nLCt3Dwb7np1eNlKD6AoW+Kgv9Umur/yoUQ==",
       "type": "package",
@@ -28033,16 +28864,20 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Acr.UserDialogs >= 6.5.1",
       "Autofac >= 4.6.1",
       "Com.Airbnb.Xamarin.Forms.Lottie >= 2.3.2",
       "FluentValidation >= 7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
+      "Plugin.MediaManager.Forms >= 0.4.3",
       "Plugin.Share >= 7.0.1",
       "Prism.Core >= 6.3.0",
       "Syncfusion.Xamarin.SfListView >= 15.3.0.29",
+      "Syncfusion.Xamarin.SfRadialMenu >= 15.3.0.29",
       "Syncfusion.Xamarin.SfRotator >= 15.3.0.29",
       "Toasts.Forms.Plugin >= 3.2.1",
       "Xam.Plugins.Forms.ImageCircle >= 1.8.1",
+      "Xam.Plugins.Messaging >= 4.0.0",
       "Xamarin.Forms >= 2.3.4.270",
       "sqlite-net-pcl >= 1.4.118"
     ],
@@ -28083,17 +28918,21 @@
       }
     },
     "dependencies": {
+      "Acr.UserDialogs": "6.5.1",
       "Autofac": "4.6.1",
       "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
       "FluentValidation": "7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+      "Plugin.MediaManager.Forms": "0.4.3",
       "Plugin.Share": "7.0.1",
       "Prism.Core": "6.3.0",
       "sqlite-net-pcl": "1.4.118",
       "Syncfusion.Xamarin.SfListView": "15.3.0.29",
+      "Syncfusion.Xamarin.SfRadialMenu": "15.3.0.29",
       "Syncfusion.Xamarin.SfRotator": "15.3.0.29",
       "Toasts.Forms.Plugin": "3.2.1",
       "Xam.Plugins.Forms.ImageCircle": "1.8.1",
+      "Xam.Plugins.Messaging": "4.0.0",
       "Xamarin.Forms": "2.3.4.270"
     },
     "frameworks": {

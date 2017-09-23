@@ -19,16 +19,16 @@ namespace Application.Tests
             //Arrange
             FetchModelCollectionResult<Contact> fetchResult = new FetchModelCollectionResult<Contact>();
             fetchResult.ModelCollection = new List<Contact> { new Contact { Name = "Item 1" } };
-            _repoMock.Setup(x => x.FetchSampleItemsAsync()).ReturnsAsync(new FetchModelCollectionResult<Contact>());
+            _repoMock.Setup(x => x.FetchContactsAsync()).ReturnsAsync(new FetchModelCollectionResult<Contact>());
 
             //Act
             await _viewModel.InitializeAsync(null);
 
             //Assert
             _repoMock.VerifyAll();
-            Assert.NotNull(_viewModel.RecentActivities, "Expected collection not to be null");
-            Assert.IsTrue(_viewModel.RecentActivities.Count > 0, "Expected some sample items");
-            Assert.IsTrue(_viewModel.RecentActivities.Contains(fetchResult.ModelCollection[0]), "Expected SampleItems to contain the correct values");
+            Assert.NotNull(_viewModel.RecentContacts, "Expected collection not to be null");
+            Assert.IsTrue(_viewModel.RecentContacts.Count > 0, "Expected some sample items");
+            Assert.IsTrue(_viewModel.RecentContacts.Contains(fetchResult.ModelCollection[0]), "Expected SampleItems to contain the correct values");
         }
 
         [SetUp]

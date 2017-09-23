@@ -6,12 +6,23 @@
              xmlns:local="clr-namespace:SampleApplication.Views"
              xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              xmlns:syncListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:views="clr-namespace:SampleApplication.Controls"
+             xmlns:views="clr-namespace:SampleApplication.Views"
              Title="Recent Activity">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding CreateContactNavigationCommand}"
+        <ToolbarItem Command="{Binding ShareCommand}"
                      Order="Primary"
                      Priority="0">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="ic_share_dark.png"
+                            WinPhone="Images/ic_share_dark.png"
+                            iOS="ic_share.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem Command="{Binding CreateContactNavigationCommand}"
+                     Order="Primary"
+                     Priority="1">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="ic_insert_dark.png"
@@ -22,23 +33,41 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="#F5F5F5">
             <Grid.Resources>
                 <ResourceDictionary>
-                    <views:BooleanToInvertedBooleanConverter x:Key="bob" />
+                    <controls:BooleanToInvertedBooleanConverter x:Key="bob" />
                 </ResourceDictionary>
             </Grid.Resources>
 
-            <views:SfListViewEx x:Name="_listView"
-                                AllowSwiping="True"
-                                ItemSize="130"
-                                ItemSpacing="5,2,5,2"
-                                ItemTappedCommand="{Binding OpenSelectedActivityCommand}"
-                                ItemsSource="{Binding RecentActivities}"
-                                RightSwipeCommand="{Binding RemoveFromRecentsCommand}"
-                                SelectedItem="{Binding SelectedActivity}"
-                                SelectionMode="Single"
-                                SwipeOffset="200">
+            <controls:SfListViewEx x:Name="_listView"
+                                   AllowSwiping="True"
+                                   ItemSize="130"
+                                   ItemSpacing="5,2,5,2"
+                                   ItemTappedCommand="{Binding OpenSelectedContactCommand}"
+                                   ItemsSource="{Binding RecentContacts}"
+                                   LeftSwipeCommand="{Binding RemoveContactCommand}"
+                                   RightSwipeCommand="{Binding AddQuickNotesCommand}"
+                                   SelectedItem="{Binding SelectedContact}"
+                                   SelectionBackgroundColor="Accent"
+                                   SelectionGesture="Tap"
+                                   SelectionMode="Single"
+                                   SwipeOffset="200">
+
+                <syncListView:SfListView.LeftSwipeTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="#DC595F"
+                              HorizontalOptions="Fill"
+                              VerticalOptions="Fill">
+                            <Image HeightRequest="45"
+                                   HorizontalOptions="Center"
+                                   Source="ic_delete_dark"
+                                   VerticalOptions="Center"
+                                   WidthRequest="45" />
+                        </Grid>
+                    </DataTemplate>
+                </syncListView:SfListView.LeftSwipeTemplate>
+
                 <syncListView:SfListView.RightSwipeTemplate>
                     <DataTemplate>
                         <Grid BackgroundColor="Accent"
@@ -46,21 +75,19 @@
                               VerticalOptions="Fill">
                             <Image HeightRequest="45"
                                    HorizontalOptions="Center"
-                                   Source="cancel_appointment_dark"
+                                   Source="ic_notes_dark"
                                    VerticalOptions="Center"
                                    WidthRequest="45" />
                         </Grid>
                     </DataTemplate>
                 </syncListView:SfListView.RightSwipeTemplate>
-                <views:SfListViewEx.ItemTemplate>
+                <controls:SfListViewEx.ItemTemplate>
                     <DataTemplate>
-                        <Frame HasShadow="True">
-                            <views:ContactCard Value="{Binding .}" />
-                        </Frame>
+                        <views:ContactCard Value="{Binding .}" />
                     </DataTemplate>
-                </views:SfListViewEx.ItemTemplate>
-            </views:SfListViewEx>
-            <Grid IsVisible="{Binding HasActivities, Converter={StaticResource bob}}">
+                </controls:SfListViewEx.ItemTemplate>
+            </controls:SfListViewEx>
+            <Grid IsVisible="{Binding HasContacts, Converter={StaticResource bob}}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />

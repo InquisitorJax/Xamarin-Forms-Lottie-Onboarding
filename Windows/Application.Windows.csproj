@@ -113,6 +113,9 @@
     <Content Include="..\Images\fate.png">
       <Link>Images\fate.png</Link>
     </Content>
+    <Content Include="..\Images\ic_share_dark.png">
+      <Link>Images\ic_share_dark.png</Link>
+    </Content>
     <Content Include="..\Images\manhattan.png">
       <Link>Images\manhattan.png</Link>
     </Content>

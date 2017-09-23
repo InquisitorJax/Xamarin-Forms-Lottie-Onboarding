@@ -1,7 +1,10 @@
-﻿using Core;
+﻿using Autofac;
+using Core;
 using Prism.Commands;
 using Prism.Events;
+using SampleApplication.AppServices;
 using SampleApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -19,16 +22,21 @@ namespace SampleApplication
         private bool _mainMenuOpen;
         private SubscriptionToken _modelUpdatedEventToken;
 
-        private ObservableCollection<Contact> _recentActivities;
+        private ObservableCollection<Contact> _recentContacts;
 
         private Contact _selectedSampleItem;
+
+        private HighriseUser _user;
 
         public MainViewModel(IRepository repository)
         {
             _repository = repository;
-            FetchSampleItemsCommand = new DelegateCommand(FetchSampleItems);
-            OpenSelectedSampleItemCommand = new DelegateCommand(OpenSelectedSampleItemAsync);
-            CreateSampleItemNavigationCommand = new DelegateCommand(CreateSampleItemNavigateAsync);
+            FetchContactsCommand = new DelegateCommand(FetchContacts);
+            OpenSelectedContactCommand = new DelegateCommand<Contact>(OpenSelectedContactAsync);
+            CreateContactNavigationCommand = new DelegateCommand(CreateSampleItemNavigateAsync);
+            AddQuickNotesCommand = new DelegateCommand<Contact>(AddQuickNote);
+            ShareCommand = new DelegateCommand(ShareHighrise);
+            RemoveContactCommand = new DelegateCommand<Contact>(RemoveContact);
             MainMenuItemClickCommand = new DelegateCommand<MainMenuItem>(MainMenuItemClick);
             Title = "Xamarin Forms Onboarding with Lottie!";
 
@@ -83,10 +91,19 @@ namespace SampleApplication
             });
         }
 
-        public ICommand CreateSampleItemNavigationCommand { get; private set; }
-        public ICommand FetchSampleItemsCommand { get; private set; }
+        public ICommand AddQuickNotesCommand { get; private set; }
 
-        public bool HasActivties
+        public ICommand CreateContactNavigationCommand { get; private set; }
+
+        public HighriseUser CurrentUser
+        {
+            get { return _user; }
+            set { SetProperty(ref _user, value); }
+        }
+
+        public ICommand FetchContactsCommand { get; private set; }
+
+        public bool HasContacts
         {
             get { return _hasActivities; }
             set { SetProperty(ref _hasActivities, value); }
@@ -99,6 +116,7 @@ namespace SampleApplication
         }
 
         public ICommand MainMenuItemClickCommand { get; private set; }
+
         public IList<MainMenuItem> MainMenuItems { get; private set; }
 
         public bool MainMenuOpen
@@ -107,63 +125,98 @@ namespace SampleApplication
             set { SetProperty(ref _mainMenuOpen, value); }
         }
 
-        public ICommand OpenSelectedSampleItemCommand { get; private set; }
+        public ICommand OpenSelectedContactCommand { get; private set; }
 
-        public ObservableCollection<Contact> RecentActivities
+        public ObservableCollection<Contact> RecentContacts
         {
-            get { return _recentActivities; }
+            get { return _recentContacts; }
             set
             {
-                if (_recentActivities != null)
-                    _recentActivities.CollectionChanged -= RecentActivities_CollectionChanged;
+                if (_recentContacts != null)
+                    _recentContacts.CollectionChanged -= RecentContacts_CollectionChanged;
 
-                SetProperty(ref _recentActivities, value);
+                SetProperty(ref _recentContacts, value);
 
-                if (_recentActivities != null)
-                    _recentActivities.CollectionChanged += RecentActivities_CollectionChanged;
+                if (_recentContacts != null)
+                    _recentContacts.CollectionChanged += RecentContacts_CollectionChanged;
+
+                CheckHasContacts();
             }
         }
 
-        public Contact SelectedSampleItem
+        public ICommand RemoveContactCommand { get; private set; }
+
+        public Contact SelectedContact
         {
             get { return _selectedSampleItem; }
             set { SetProperty(ref _selectedSampleItem, value); }
         }
 
+        public ICommand ShareCommand { get; private set; }
+
         public string Title { get; set; }
+
+        private IShareService ShareService
+        {
+            get { return CC.IoC.Resolve<IShareService>(); }
+        }
 
         public override void Closing()
         {
             CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Unsubscribe(_modelUpdatedEventToken);
         }
 
-        public override async Task InitializeAsync(System.Collections.Generic.Dictionary<string, string> args)
+        public override async Task InitializeAsync(Dictionary<string, string> args)
         {
-            _modelUpdatedEventToken = CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Subscribe(OnSampleItemUpdated);
-            await FetchSampleItemsAsync();
+            _modelUpdatedEventToken = CC.EventMessenger.GetEvent<ModelUpdatedMessageEvent<Contact>>().Subscribe(OnContactUpdated);
+            await FetchContactsAsync();
+
+            CurrentUser = await _repository.FetchHighriseUserAsync();
+        }
+
+        private async void AddQuickNote(Contact contact)
+        {
+            UserPromptConfig prompt = new UserPromptConfig
+            {
+                Caption = "Add Contact Note",
+                LabelText = "Contact Note",
+                Message = "Add a note for this contact"
+            };
+            UserPromptResult promptResult = await UserNotifier.ShowPromptAsync(prompt);
+
+            if (!promptResult.Cancelled)
+            {
+                contact.Notes += Environment.NewLine + promptResult.InputText;
+                await _repository.SaveContactAsync(contact, updateEvent: ModelUpdateEvent.Updated);
+            }
+        }
+
+        private void CheckHasContacts()
+        {
+            HasContacts = _recentContacts != null && _recentContacts.Count > 0;
         }
 
         private async void CreateSampleItemNavigateAsync()
         {
-            await Navigation.NavigateAsync(Constants.Navigation.ItemPage);
+            await Navigation.NavigateAsync(Constants.Navigation.ContactPage);
         }
 
-        private async void FetchSampleItems()
+        private async void FetchContacts()
         {
-            await FetchSampleItemsAsync();
+            await FetchContactsAsync();
         }
 
-        private async Task FetchSampleItemsAsync()
+        private async Task FetchContactsAsync()
         {
             ListRefreshing = true;
 
             try
             {
-                FetchModelCollectionResult<Contact> fetchResult = await _repository.FetchSampleItemsAsync();
+                FetchModelCollectionResult<Contact> fetchResult = await _repository.FetchContactsAsync();
 
                 if (fetchResult.IsValid())
                 {
-                    RecentActivities = fetchResult.ModelCollection.AsObservableCollection();
+                    RecentContacts = fetchResult.ModelCollection.AsObservableCollection();
 
                     ListRefreshing = false;
                 }
@@ -194,27 +247,58 @@ namespace SampleApplication
             }
         }
 
-        private void OnSampleItemUpdated(ModelUpdatedMessageResult<Contact> updateResult)
+        private void OnContactUpdated(ModelUpdatedMessageResult<Contact> updateResult)
         {
-            RecentActivities.UpdateCollection(updateResult.UpdatedModel, updateResult.UpdateEvent);
-        }
+            RecentContacts.UpdateCollection(updateResult.UpdatedModel, updateResult.UpdateEvent);
 
-        private async void OpenSelectedSampleItemAsync()
-        {
-            if (SelectedSampleItem != null)
+            if (RecentContacts.Count == 1 && !CurrentUser.HasShownFirstContactAchievementPrompt)
             {
-                Dictionary<string, string> args = new Dictionary<string, string>
-                {
-                    {Constants.Parameters.Id, SelectedSampleItem.Id}
-                };
-
-                await Navigation.NavigateAsync(Constants.Navigation.ItemPage, args);
+                ShowFirstContactPrompt();
             }
         }
 
-        private void RecentActivities_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private async void OpenSelectedContactAsync(Contact contact)
         {
-            HasActivties = _recentActivities != null && _recentActivities.Count > 0;
+            SelectedContact = contact;
+            if (SelectedContact != null)
+            {
+                Dictionary<string, string> args = new Dictionary<string, string>
+                {
+                    {Constants.Parameters.Id, SelectedContact.Id}
+                };
+
+                await Navigation.NavigateAsync(Constants.Navigation.ContactPage, args);
+            }
+        }
+
+        private void RecentContacts_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            CheckHasContacts();
+        }
+
+        private async void RemoveContact(Contact contact)
+        {
+            var result = await UserNotifier.ShowConfirmAsync("Are your sure you want to delete this contact?", "delete contact", "yes");
+
+            if (result)
+            {
+                var deleteResult = await _repository.DeleteContactAsync(contact);
+                if (deleteResult.IsValid())
+                {
+                    RecentContacts.UpdateCollection(contact, ModelUpdateEvent.Deleted);
+                }
+            }
+        }
+
+        private void ShareHighrise()
+        {
+            ShareService.Share("Amazingly simple CRM - Try Highrise!", "Highrise CRM is awesome :)", Constants.ShareLinks.Highrise);
+        }
+
+        private void ShowFirstContactPrompt()
+        {
+            //UserNotifier.ShowToastAsync("Achievement unlocked! First contact made!!");
+            Navigation.NavigateAsync(Constants.Navigation.FirstContactPromptPage, null, true);
         }
 
         private async Task SignoutAsync()

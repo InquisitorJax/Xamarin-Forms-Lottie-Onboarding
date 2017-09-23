@@ -43,6 +43,7 @@
     <Compile Include="Controls\NullValueToBooleanConverter.cs" />
     <Compile Include="Controls\SfListViewEx.cs" />
     <Compile Include="Models\AnimationModel.cs" />
+    <Compile Include="Models\HelpItem.cs" />
     <Compile Include="Models\HighriseUser.cs" />
     <Compile Include="Models\MainMenuItem.cs" />
     <Compile Include="App.xaml.cs">
@@ -51,12 +52,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IocApplicationModule.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
+    <Compile Include="ViewModels\FirstContactPromptViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\ContactCard.xaml.cs">
       <DependentUpon>ContactCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstContactPromptPage.xaml.cs">
+      <DependentUpon>FirstContactPromptPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
@@ -76,8 +81,8 @@
     <Compile Include="Views\ItemListPage.xaml.cs">
       <DependentUpon>ItemListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ItemPage.xaml.cs">
-      <DependentUpon>ItemPage.xaml</DependentUpon>
+    <Compile Include="Views\ContactPage.xaml.cs">
+      <DependentUpon>ContactPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Repository\Repository.cs" />
@@ -102,7 +107,7 @@
     <EmbeddedResource Include="Views\ItemListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ItemPage.xaml">
+    <EmbeddedResource Include="Views\ContactPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -163,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ContactCard.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FirstContactPromptPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

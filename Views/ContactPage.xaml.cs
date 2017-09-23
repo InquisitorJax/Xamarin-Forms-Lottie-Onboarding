@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace SampleApplication.Views
 {
-    public partial class ItemPage : ContentPage, IView
+    public partial class ContactPage : ContentPage, IView
     {
-        public ItemPage()
+        public ContactPage()
         {
             InitializeComponent();
         }

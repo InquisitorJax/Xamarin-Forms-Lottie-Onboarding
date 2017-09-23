@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace SampleApplication
 {
-    public class ItemViewModel : ViewModelBase
+    public class ContactViewModel : ViewModelBase
     {
         private readonly IRepository _repository;
         private readonly IModelValidator<Contact> _validator;
@@ -17,7 +17,7 @@ namespace SampleApplication
 
         private Contact _model;
 
-        public ItemViewModel(IRepository repository, IModelValidator<Contact> validator)
+        public ContactViewModel(IRepository repository, IModelValidator<Contact> validator)
         {
             _repository = repository;
             _validator = validator;
@@ -37,7 +37,7 @@ namespace SampleApplication
             if (args != null && args.ContainsKey(Constants.Parameters.Id))
             {
                 string id = args[Constants.Parameters.Id];
-                var fetchResult = await _repository.FetchSampleItemAsync(id);
+                var fetchResult = await _repository.FetchContactAsync(id);
                 if (fetchResult.IsValid())
                 {
                     Model = fetchResult.Model;
@@ -51,7 +51,12 @@ namespace SampleApplication
             { //assume new model required
                 Model = new Contact()
                 {
-                    Id = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString(),
+                    //design data
+                    PictureName = "manhattan",
+                    Name = "Dr. Manhattan",
+                    Notes = "Stay on this guy's good side :P",
+                    NextAppointmentDate = DateTime.Now.AddDays(2)
                 };
                 _isNewModel = true;
             }
@@ -66,7 +71,7 @@ namespace SampleApplication
 
             if (result.IsValid())
             {
-                var saveResult = await _repository.SaveSampleItemAsync(Model, updateEvent);
+                var saveResult = await _repository.SaveContactAsync(Model, updateEvent);
                 result.AddRange(saveResult);
             }
 

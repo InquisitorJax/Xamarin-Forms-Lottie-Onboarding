@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SampleApplication.Views.FirstContactPromptPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Core.Controls;assembly=XForms.Shared"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:video="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <lottie:AnimationView Animation="trophy.json"
+                                      AutoPlay="True"
+                                      HeightRequest="50"
+                                      HorizontalOptions="FillAndExpand"
+                                      Loop="True"
+                                      VerticalOptions="FillAndExpand"
+                                      WidthRequest="50" />
+
+                <Label Grid.Column="1"
+                       HorizontalOptions="CenterAndExpand"
+                       Text="Achievement unlocked!"
+                       VerticalOptions="CenterAndExpand" />
+                <lottie:AnimationView Grid.Column="2"
+                                      Animation="trophy.json"
+                                      AutoPlay="True"
+                                      HeightRequest="50"
+                                      HorizontalOptions="FillAndExpand"
+                                      Loop="True"
+                                      VerticalOptions="FillAndExpand"
+                                      WidthRequest="50" />
+            </Grid>
+
+            <controls:ListView x:Name="listView"
+                               Grid.Row="1"
+                               BackgroundColor="#5D98B0"
+                               ItemTapCommand="{Binding OpenHelpLinkCommand}"
+                               ItemsSource="{Binding HelpItems}"
+                               VerticalOptions="FillAndExpand">
+                <controls:ListView.Header>
+                    <Label Text="Congratulations on adding your first contact! Here's some more links to help you get started" TextColor="White" />
+                </controls:ListView.Header>
+                <controls:ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Height="50"
+                                  Detail="{Binding Description}"
+                                  DetailColor="Silver"
+                                  Text="{Binding Title}"
+                                  TextColor="White" />
+                    </DataTemplate>
+                </controls:ListView.ItemTemplate>
+            </controls:ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

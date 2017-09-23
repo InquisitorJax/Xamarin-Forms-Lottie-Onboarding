@@ -1,6 +1,7 @@
 ﻿{
   "supports": {},
   "dependencies": {
+    "Acr.UserDialogs": "6.5.1",
     "Autofac": "4.6.1",
     "FluentValidation": "7.1.1",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",

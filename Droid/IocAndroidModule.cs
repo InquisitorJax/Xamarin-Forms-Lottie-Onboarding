@@ -11,6 +11,7 @@ namespace Application.Droid
 
             builder.RegisterType<AndroidDatabaseConnectionFactory>().As<IDatabaseConnectionFactory>().AsSelf();
             builder.RegisterType<AndroidExceptionManager>().As<IPlatformExceptionManager>().AsSelf().SingleInstance();
+            builder.RegisterType<Plugin.Toasts.ToastNotification>().As<Plugin.Toasts.IToastNotificator>().AsSelf();
         }
     }
 }

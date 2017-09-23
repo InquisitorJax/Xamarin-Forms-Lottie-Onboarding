@@ -20,8 +20,11 @@ namespace SampleApplication.AppServices
 
         public void Share(string shareMessage, string title = null, string url = null)
         {
+            if (!CrossShare.IsSupported)
+                return;
+
             ShareMessage message = new ShareMessage { Text = shareMessage, Title = title, Url = url };
-            ShareOptions options = new ShareOptions { ChooserTitle = "Highrise is awesome!" };
+            ShareOptions options = new ShareOptions { ChooserTitle = "share the awesomeness!" };
             CrossShare.Current.Share(message, options);
         }
     }

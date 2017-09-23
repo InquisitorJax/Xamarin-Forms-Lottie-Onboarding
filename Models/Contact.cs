@@ -5,16 +5,17 @@ namespace SampleApplication
 {
     public class Contact : ModelBase
     {
-        private string _description;
-
+        private string _email;
         private string _name;
         private DateTime? _nextAppointmentDate;
-        private byte[] _picture;
+        private string _notes;
+        private string _phone;
+        private string _pictureName;
 
-        public string Description
+        public string Email
         {
-            get { return _description; }
-            set { SetProperty(ref _description, value); }
+            get { return _email; }
+            set { SetProperty(ref _email, value); }
         }
 
         public string Name
@@ -29,10 +30,22 @@ namespace SampleApplication
             set { SetProperty(ref _nextAppointmentDate, value); }
         }
 
-        public byte[] Picture
+        public string Notes
         {
-            get { return _picture; }
-            set { SetProperty(ref _picture, value); }
+            get { return _notes; }
+            set { SetProperty(ref _notes, value); }
+        }
+
+        public string Phone
+        {
+            get { return _phone; }
+            set { SetProperty(ref _phone, value); }
+        }
+
+        public string PictureName
+        {
+            get { return _pictureName; }
+            set { SetProperty(ref _pictureName, value); }
         }
     }
 }
