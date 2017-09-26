@@ -21,9 +21,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -93,6 +94,24 @@
     <Compile Include="AppDelegate.cs" />
     <BundleResource Include="Resources\ic_insert.png" />
     <BundleResource Include="Resources\ic_submit.png" />
+    <BundleResource Include="..\LottieFiles\alarm.json">
+      <Link>alarm.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\LottieFiles\birds.json">
+      <Link>birds.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\LottieFiles\empty_box.json">
+      <Link>empty_box.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\LottieFiles\nudge.json">
+      <Link>nudge.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\LottieFiles\stopwatch.json">
+      <Link>stopwatch.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\LottieFiles\trophy.json">
+      <Link>trophy.json</Link>
+    </BundleResource>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +127,57 @@
     </BundleResource>
     <BundleResource Include="..\Images\ic_share.png">
       <Link>Resources\ic_share.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_case_dark.png">
+      <Link>Resources\ic_case_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_customer_dark.png">
+      <Link>Resources\ic_customer_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_deal_dark.png">
+      <Link>Resources\ic_deal_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_delete_dark.png">
+      <Link>Resources\ic_delete_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_help_dark.png">
+      <Link>Resources\ic_help_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_highrise_logo_text.png">
+      <Link>Resources\ic_highrise_logo_text.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_mail_command.png">
+      <Link>Resources\ic_mail_command.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_notes_dark.png">
+      <Link>Resources\ic_notes_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_phone_action.png">
+      <Link>Resources\ic_phone_action.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_phone_command.png">
+      <Link>Resources\ic_phone_command.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_search_dark.png">
+      <Link>Resources\ic_search_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_settings_dark.png">
+      <Link>Resources\ic_settings_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_sign_out_dark.png">
+      <Link>Resources\ic_sign_out_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_sms_command.png">
+      <Link>Resources\ic_sms_command.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_tasks_dark.png">
+      <Link>Resources\ic_tasks_dark.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\ic_user_info_action.png">
+      <Link>Resources\ic_user_info_action.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Images\profile.png">
+      <Link>Resources\profile.png</Link>
     </BundleResource>
     <Content Include="Entitlements.plist" />
     <None Include="packages.config" />

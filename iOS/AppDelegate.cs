@@ -51,7 +51,7 @@ namespace SampleApplication.iOS
             LoadApplication(new App(new IociOSModule()));
 
             // make the window visible
-            Window.MakeKeyAndVisible();
+            //Window.MakeKeyAndVisible();
 
             return base.FinishedLaunching(application, launchOptions);
         }
