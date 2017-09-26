@@ -21,3 +21,7 @@ https://github.com/jamesmontemagno/ImageCirclePlugin
 Slideover kit
 https://github.com/XAM-Consulting/SlideOverKit
 
+demo Youtube video
+https://youtu.be/8QIpoZFGif0
+
+
