@@ -113,11 +113,62 @@
     <Content Include="..\Images\fate.png">
       <Link>Images\fate.png</Link>
     </Content>
+    <Content Include="..\Images\ic_case_dark.png">
+      <Link>Images\ic_case_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_customer_dark.png">
+      <Link>Images\ic_customer_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_deal_dark.png">
+      <Link>Images\ic_deal_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_delete_dark.png">
+      <Link>Images\ic_delete_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_help_dark.png">
+      <Link>Images\ic_help_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_highrise_logo_text.png">
+      <Link>Images\ic_highrise_logo_text.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_mail_command.png">
+      <Link>Images\ic_mail_command.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_notes_dark.png">
+      <Link>Images\ic_notes_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_phone_action.png">
+      <Link>Images\ic_phone_action.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_phone_command.png">
+      <Link>Images\ic_phone_command.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_search_dark.png">
+      <Link>Images\ic_search_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_settings_dark.png">
+      <Link>Images\ic_settings_dark.png</Link>
+    </Content>
     <Content Include="..\Images\ic_share_dark.png">
       <Link>Images\ic_share_dark.png</Link>
     </Content>
+    <Content Include="..\Images\ic_sign_out_dark.png">
+      <Link>Images\ic_sign_out_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_sms_command.png">
+      <Link>Images\ic_sms_command.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_tasks_dark.png">
+      <Link>Images\ic_tasks_dark.png</Link>
+    </Content>
+    <Content Include="..\Images\ic_user_info_action.png">
+      <Link>Images\ic_user_info_action.png</Link>
+    </Content>
     <Content Include="..\Images\manhattan.png">
       <Link>Images\manhattan.png</Link>
+    </Content>
+    <Content Include="..\Images\profile.png">
+      <Link>Images\profile.png</Link>
     </Content>
     <Content Include="..\Images\strange.png">
       <Link>Images\strange.png</Link>

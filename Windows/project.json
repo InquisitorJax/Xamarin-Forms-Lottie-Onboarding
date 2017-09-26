@@ -2,7 +2,7 @@
   "dependencies": {
     "Acr.UserDialogs": "6.5.1",
     "Autofac": "4.6.1",
-    "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+    "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
     "FluentValidation": "7.1.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
     "Plugin.MediaManager.Forms": "0.4.3",

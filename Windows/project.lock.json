@@ -41,7 +41,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -2721,7 +2721,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -2795,7 +2795,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -5494,7 +5494,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -5568,7 +5568,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -8303,7 +8303,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -8377,7 +8377,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -11085,7 +11085,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -11159,7 +11159,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -13903,7 +13903,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -13977,7 +13977,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -16685,7 +16685,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -16759,7 +16759,7 @@
           "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
-      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "2.3.4.247"
@@ -19503,7 +19503,7 @@
         "dependencies": {
           "Acr.UserDialogs": "6.5.1",
           "Autofac": "4.6.1",
-          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
           "FluentValidation": "7.1.1",
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
@@ -19625,13 +19625,13 @@
         "lib/wpa81/Coding4Fun.Toolkit.pri"
       ]
     },
-    "Com.Airbnb.Xamarin.Forms.Lottie/2.3.2": {
-      "sha512": "8BftZ9xuQ8Iy3iaHfHUxFuPJMeBraG4eULMNmcKVWoHBNyn8g9Jn7W7YeZXk9KDKxhdNM/cvQRBn0n6asYjHng==",
+    "Com.Airbnb.Xamarin.Forms.Lottie/2.3.4": {
+      "sha512": "z48qDY32vcWnZB2lixrDrXw645O+ScHGn3iXH37/VsHeD68XB1fWOFm555m41K81sLcApi9SDrYdOuFk9j6mQg==",
       "type": "package",
-      "path": "com.airbnb.xamarin.forms.lottie/2.3.2",
+      "path": "com.airbnb.xamarin.forms.lottie/2.3.4",
       "files": [
-        "Com.Airbnb.Xamarin.Forms.Lottie.2.3.2.nupkg.sha512",
-        "Com.Airbnb.Xamarin.Forms.Lottie.nuspec",
+        "com.airbnb.xamarin.forms.lottie.2.3.4.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
         "lib/MonoAndroid70/Lottie.Forms.Droid.dll",
         "lib/MonoAndroid70/Lottie.Forms.Droid.pdb",
         "lib/MonoAndroid70/Lottie.Forms.dll",
@@ -28866,7 +28866,7 @@
     "": [
       "Acr.UserDialogs >= 6.5.1",
       "Autofac >= 4.6.1",
-      "Com.Airbnb.Xamarin.Forms.Lottie >= 2.3.2",
+      "Com.Airbnb.Xamarin.Forms.Lottie >= 2.3.4",
       "FluentValidation >= 7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
       "Plugin.MediaManager.Forms >= 0.4.3",
@@ -28920,7 +28920,7 @@
     "dependencies": {
       "Acr.UserDialogs": "6.5.1",
       "Autofac": "4.6.1",
-      "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.2",
+      "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
       "FluentValidation": "7.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
       "Plugin.MediaManager.Forms": "0.4.3",
