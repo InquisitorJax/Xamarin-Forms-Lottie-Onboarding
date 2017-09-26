@@ -25,10 +25,21 @@
                                       VerticalOptions="FillAndExpand"
                                       WidthRequest="50" />
 
-                <Label Grid.Column="1"
-                       HorizontalOptions="CenterAndExpand"
-                       Text="Achievement unlocked!"
-                       VerticalOptions="CenterAndExpand" />
+                <StackLayout Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                    <Label HorizontalOptions="CenterAndExpand"
+                           Text="Achievement 1 of 20 unlocked"
+                           VerticalOptions="CenterAndExpand" />
+                    <Label FontSize="Large"
+                           HorizontalOptions="CenterAndExpand"
+                           Text="FIRST CONTACT!" />
+                    <Label HorizontalOptions="CenterAndExpand"
+                           Text="Tap here to share the good news"
+                           TextColor="Accent">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShareAchievementCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
                 <lottie:AnimationView Grid.Column="2"
                                       Animation="trophy.json"
                                       AutoPlay="True"
@@ -46,7 +57,9 @@
                                ItemsSource="{Binding HelpItems}"
                                VerticalOptions="FillAndExpand">
                 <controls:ListView.Header>
-                    <Label Text="Congratulations on adding your first contact! Here's some more links to help you get started" TextColor="White" />
+                    <Label Margin="7,0,0,0"
+                           Text="Congratulations on adding your first contact! Here's some more links to help you get started:"
+                           TextColor="White" />
                 </controls:ListView.Header>
                 <controls:ListView.ItemTemplate>
                     <DataTemplate>

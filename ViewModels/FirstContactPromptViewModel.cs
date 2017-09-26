@@ -16,6 +16,7 @@ namespace SampleApplication
         public FirstContactPromptViewModel()
         {
             OpenHelpLinkCommand = new DelegateCommand<HelpItem>(OpenHelpLink);
+            ShareAchievementCommand = new DelegateCommand(ShareAchievement);
 
             HelpItems = new List<HelpItem>
             {
@@ -113,7 +114,10 @@ namespace SampleApplication
         }
 
         public IList<HelpItem> HelpItems { get; private set; }
+
         public ICommand OpenHelpLinkCommand { get; private set; }
+
+        public ICommand ShareAchievementCommand { get; private set; }
 
         private IShareService ShareService
         {
@@ -126,6 +130,11 @@ namespace SampleApplication
             {
                 ShareService.OpenUri(new Uri(item.Link));
             }
+        }
+
+        private void ShareAchievement()
+        {
+            ShareService.Share("I added my first contact to highrise :)", "Highrise Achievement Unlocked", Constants.ShareLinks.Highrise);
         }
     }
 }
