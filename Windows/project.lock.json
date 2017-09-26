@@ -67,6 +67,18 @@
           "lib/netstandard1.0/FluentValidation.dll": {}
         }
       },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -2672,6 +2684,29 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          }
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -2819,6 +2854,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -5445,6 +5492,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -5592,6 +5651,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -8254,6 +8325,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -8401,6 +8484,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -11036,6 +11131,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -11183,6 +11290,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -13854,6 +13973,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -14001,6 +14132,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -16636,6 +16779,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -16783,6 +16938,18 @@
         },
         "runtime": {
           "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "LottieUWP/2.2.5-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.21.0"
+        },
+        "compile": {
+          "lib/uap10.0/LottieUWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/LottieUWP.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -19454,6 +19621,18 @@
           "lib/uap10.0/Toasts.Forms.Plugin.UWP.dll": {}
         }
       },
+      "Win2D.uwp/1.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "Xam.Plugins.Forms.ImageCircle/1.8.1": {
         "type": "package",
         "dependencies": {
@@ -19663,6 +19842,17 @@
         "lib/net45/FluentValidation.xml",
         "lib/netstandard1.0/FluentValidation.dll",
         "lib/netstandard1.0/FluentValidation.xml"
+      ]
+    },
+    "LottieUWP/2.2.5-beta1": {
+      "sha512": "PhwUON5Qxg7dl96ENRHJaGjrMZZUD0dY2MVXkWCMMHECMdHxjVGcjMi5myzvUFABBZG0qFyW+i87a2Mp/JbwrA==",
+      "type": "package",
+      "path": "lottieuwp/2.2.5-beta1",
+      "files": [
+        "lib/uap10.0/LottieUWP.dll",
+        "lib/uap10.0/LottieUWP.pri",
+        "lottieuwp.2.2.5-beta1.nupkg.sha512",
+        "lottieuwp.nuspec"
       ]
     },
     "Microsoft.CSharp/4.0.1": {
@@ -28610,6 +28800,24 @@
         "toasts.forms.plugin.nuspec"
       ]
     },
+    "Win2D.uwp/1.21.0": {
+      "sha512": "4Ds/p7HgysgV67pBo/+w7Lidj08Hfa4GD9Zg9HdN3/zLfzRPttHrIn2TUiOUZCgH4eLVJwzOk114ntv4bveS1Q==",
+      "type": "package",
+      "path": "win2d.uwp/1.21.0",
+      "files": [
+        "Win2d.githash.txt",
+        "build/native/Win2D.uwp.targets",
+        "include/Microsoft.Graphics.Canvas.h",
+        "include/Microsoft.Graphics.Canvas.native.h",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.winmd",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.xml",
+        "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll",
+        "win2d.uwp.1.21.0.nupkg.sha512",
+        "win2d.uwp.nuspec"
+      ]
+    },
     "Xam.Plugins.Forms.ImageCircle/1.8.1": {
       "sha512": "gU4mTnwB3TCBw3eLP0MNpLUKNsWxYJe28NbpU/CY6YQaGtrIOZ5XRrvjz30w6AKhXeIA+DC6klUY1YqfCNWgPg==",
       "type": "package",
@@ -28868,6 +29076,7 @@
       "Autofac >= 4.6.1",
       "Com.Airbnb.Xamarin.Forms.Lottie >= 2.3.4",
       "FluentValidation >= 7.1.1",
+      "LottieUWP >= 2.2.5-beta1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
       "Plugin.MediaManager.Forms >= 0.4.3",
       "Plugin.Share >= 7.0.1",
@@ -28922,6 +29131,7 @@
       "Autofac": "4.6.1",
       "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
       "FluentValidation": "7.1.1",
+      "LottieUWP": "2.2.5-beta1",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
       "Plugin.MediaManager.Forms": "0.4.3",
       "Plugin.Share": "7.0.1",

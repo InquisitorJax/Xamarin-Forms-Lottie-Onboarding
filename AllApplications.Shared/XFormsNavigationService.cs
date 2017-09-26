@@ -203,7 +203,17 @@ namespace Core
             //NOTE: if _masterDetailPage is root, then _currentPage will be _masterDetailPage.Detail
             if (CurrentPage != null && CurrentPage.Navigation.NavigationStack.Count > 0)
             {
-                await CurrentPage.Navigation.PopToRootAsync();
+                if (Device.RuntimePlatform != "Windows")
+                {
+                    await CurrentPage.Navigation.PopToRootAsync();
+                }
+                else
+                {
+                    while (CurrentPage.Navigation.NavigationStack.Count > 1)
+                    {
+                        await CurrentPage.Navigation.PopAsync();
+                    }
+                }
             }
 
             _viewStack.Clear();

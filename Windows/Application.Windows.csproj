@@ -89,7 +89,25 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
+    <Content Include="..\LottieFiles\alarm.json">
+      <Link>alarm.json</Link>
+    </Content>
+    <Content Include="..\LottieFiles\birds.json">
+      <Link>birds.json</Link>
+    </Content>
+    <Content Include="..\LottieFiles\empty_box.json">
+      <Link>empty_box.json</Link>
+    </Content>
+    <Content Include="..\LottieFiles\nudge.json">
+      <Link>nudge.json</Link>
+    </Content>
+    <Content Include="..\LottieFiles\stopwatch.json">
+      <Link>stopwatch.json</Link>
+    </Content>
+    <Content Include="..\LottieFiles\trophy.json">
+      <Link>trophy.json</Link>
+    </Content>
+    <Content Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -205,7 +223,6 @@
       <Name>Application</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -4,6 +4,7 @@
     "Autofac": "4.6.1",
     "Com.Airbnb.Xamarin.Forms.Lottie": "2.3.4",
     "FluentValidation": "7.1.1",
+    "LottieUWP": "2.2.5-beta1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
     "Plugin.MediaManager.Forms": "0.4.3",
     "Plugin.Share": "7.0.1",
