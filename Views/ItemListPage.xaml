@@ -8,6 +8,15 @@
              xmlns:syncListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:views="clr-namespace:SampleApplication.Views"
              Title="Recent Activity">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#5D98B0</Color>
+            <Color x:Key="PrimaryDark">#2F6897</Color>
+            <Color x:Key="Accent">#15C44B</Color>
+            <Color x:Key="WindowBackground">#F5F5F5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding ShareCommand}"
                      Order="Primary"
@@ -49,7 +58,7 @@
                                    LeftSwipeCommand="{Binding RemoveContactCommand}"
                                    RightSwipeCommand="{Binding AddQuickNotesCommand}"
                                    SelectedItem="{Binding SelectedContact}"
-                                   SelectionBackgroundColor="Accent"
+                                   SelectionBackgroundColor="{StaticResource Accent}"
                                    SelectionGesture="Tap"
                                    SelectionMode="Single"
                                    SwipeOffset="200">
@@ -70,7 +79,7 @@
 
                 <syncListView:SfListView.RightSwipeTemplate>
                     <DataTemplate>
-                        <Grid BackgroundColor="Accent"
+                        <Grid BackgroundColor="{StaticResource Accent}"
                               HorizontalOptions="Fill"
                               VerticalOptions="Fill">
                             <Image HeightRequest="45"
@@ -106,7 +115,7 @@
                 <Button x:Name="_btnCreateContact"
                         Grid.Row="1"
                         Margin="7,0,7,0"
-                        BackgroundColor="Accent"
+                        BackgroundColor="{StaticResource Accent}"
                         BorderRadius="10"
                         Command="{Binding CreateContactNavigationCommand}"
                         HeightRequest="50"

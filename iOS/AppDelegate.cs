@@ -53,7 +53,11 @@ namespace SampleApplication.iOS
             // make the window visible
             //Window.MakeKeyAndVisible();
 
-            return base.FinishedLaunching(application, launchOptions);
+            var result = base.FinishedLaunching(application, launchOptions);
+
+            application.KeyWindow.TintColor = Helper.ToUIColor("15C44B");
+
+            return result;
         }
 
         public override void OnActivated(UIApplication application)

@@ -9,6 +9,7 @@
         <ResourceDictionary>
             <!--  XForms bug: App.XAML global Primary throws exception when referenced from launch page  -->
             <Color x:Key="Primary">#5D98B0</Color>
+            <Color x:Key="Accent">#15C44B</Color>
             <Color x:Key="PrimaryDark">#2F6897</Color>
             <Color x:Key="WindowBackground">#F5F5F5</Color>
         </ResourceDictionary>
@@ -95,7 +96,7 @@
 
                 <Button x:Name="_btnSignIn"
                         Margin="7,0,0,0"
-                        BackgroundColor="Accent"
+                        BackgroundColor="{StaticResource Accent}"
                         BorderRadius="10"
                         Command="{Binding SignInCommand}"
                         HeightRequest="50"
